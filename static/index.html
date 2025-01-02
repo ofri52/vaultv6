@@ -3,40 +3,146 @@
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
       <link rel="stylesheet" href="index.css">
-      <script type="text/javascript" src="//counter.websiteout.net/js/7/10/5/0"></script>
       <link rel="shortcut icon" type="image/jpg" href="~/favicon.ico"/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
    </head>
    <body>
-      <div id="header">
-         <img src="logo.gif" alt="Logo">
-      </div>
+      <div class="ocean">
+         <div class="wave"></div>
+         <div class="wave wave2"></div>
+       </div>
+      <div id="particles-js"></div>
       <div id="content">
-         <h1>Search the Web and use the BEST static proxy!</h1>
-
-         <form id="uv-form"">
-            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
-            <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input"/>
+         <h1>chemistryquiz v2</h1>
+         <form id="uv-form">
+            <input id="uv-search-engine" value="https://qwant.com/search?q=%s" type="hidden"/> 
+            <input id="uv-address" type="text" placeholder="search the web" class="form__input"/>
           </form>
           <div class="desc left-margin">
             <p id="uv-error"></p>
             <pre id="uv-error-code"></pre>
           </div>
-         <a href="https://discord.gg/zJhPJYJCeJ" target="_blank" class="fa-brands fa-discord"></a>
-         <a href="https://github.com/TheTIW/UV-Static" target="_blank"class="fa-brands fa-github"></a>
-         <a href="https://starttiw.org" target="_blank"class="fa-solid fa-cloud"></a>
       </div>
+      <footer>
+         <a href="https://ajh.boats">ajh.boats</a>
+         <a href="https://discord.gg/UnDrzQQksw">discord server</a>
+         <a href=""><i class="fa-brands fa-google"></i></a>
+         <a href=""><i class="fa-solid fa-gamepad"></i></a>
+         <a href=""><i class="fa-brands fa-youtube"></i></a>
+         <a href=""><i class="fa-brands fa-discord"></i></a>
+         <a href=""><i class="fa-solid fa-sliders"></i></a>
+         <span class="datetime"></span>
+      </footer>
       <script src="uv/uv.bundle.js" defer></script>
       <script src="uv/uv.config.js" defer></script>
       <script src="register-sw.js" defer></script>
       <script src="search.js" defer></script>
       <script src="index.js" defer></script>
-      <script src="error.js" defer></script>
-      <div id="footer">
-         <p>&copy; 2023 TIW. All rights reserved.</p>
-      </div>
+      <script>
+         particlesJS("particles-js", {
+            "particles": {
+               "number": {
+                  "value": 100,
+                  "density": {
+                     "enable": true,
+                     "value_area": 800
+                  }
+               },
+               "color": {
+                  "value": ["#015871", "#013442"]
+               },
+               "shape": {
+                  "type": "circle",
+                  "stroke": {
+                     "width": 0,
+                     "color": "#000000"
+                  }
+               },
+               "opacity": {
+                  "value": 0.2,
+                  "random": false,
+                  "anim": {
+                     "enable": false,
+                     "speed": 1,
+                     "opacity_min": 0.09,
+                     "sync": false
+                  }
+               },
+               "size": {
+                  "value": 4,
+                  "random": true,
+                  "anim": {
+                     "enable": false,
+                     "speed": 1,
+                     "size_min": 0.1,
+                     "sync": false
+                  }
+               },
+               "line_linked": {
+                  "enable": true,
+                  "distance": 150,
+                  "color": "#ffffff",
+                  "opacity": 0.1,
+                  "width": 1
+               },
+               "move": {
+                  "enable": true,
+                  "speed": 1,
+                  "direction": "none",
+                  "random": false,
+                  "straight": false,
+                  "out_mode": "out",
+                  "bounce": false,
+                  "attract": {
+                     "enable": false,
+                     "rotateX": 600,
+                     "rotateY": 1200
+                  }
+               }
+            },
+            "interactivity": {
+               "detect_on": "canvas",
+               "events": {
+                  "onhover": {
+                     "enable": false,
+                     "mode": "repulse"
+                  },
+                  "onclick": {
+                     "enable": false,
+                     "mode": "push"
+                  },
+                  "resize": true
+               },
+               "modes": {
+                  "grab": {
+                     "distance": 400,
+                     "line_linked": {
+                        "opacity": 1
+                     }
+                  },
+                  "bubble": {
+                     "distance": 400,
+                     "size": 40,
+                     "duration": 2,
+                     "opacity": 8,
+                     "speed": 3
+                  },
+                  "repulse": {
+                     "distance": 200,
+                     "duration": 0.4
+                  },
+                  "push": {
+                     "particles_nb": 4
+                  },
+                  "remove": {
+                     "particles_nb": 2
+                  }
+               }
+            },
+            "retina_detect": true
+         });
+      </script>
    </body>
 </html>

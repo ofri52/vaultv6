@@ -1,9 +1,33 @@
-/* Custom CSS for black theme */
+@import url('https://fonts.cdnfonts.com/css/planet-kosmos');
+@import url('https://fonts.cdnfonts.com/css/alssential-free-trial');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+* {
+  font-family: 'Crimson Text', 'Satoshi', 'Verdana', sans-serif;
+}
+
 body {
   background-color: #000;
   color: #fff;
   margin: 0;
   padding: 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#particles-js {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: -1;
+}
+
+#content {
+  font-size: 3em;
+  text-align: center;
+  padding: 2em;
+  margin-top: 1vh;
 }
 
 #header {
@@ -12,33 +36,9 @@ body {
   text-align: center;
 }
 
-#header h1 {
-  margin: 0;
-  font-size: 24px;
-  font-family: 'Arial', sans-serif;
-  color: #fff;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
 #header img {
   width: 20%;
   height: auto;
-}
-
-#content {
-  text-align: center;
-  padding: 20px;
-  margin-top: -4%;
-}
-
-#content h1 {
-  font-size: 24px;
-  cursor:pointer;
-  text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.5;
-  margin-bottom: 20px;
 }
 
 #searchbar {
@@ -46,17 +46,38 @@ body {
   margin: 20px auto;
 }
 
+h1 {
+  font-weight: normal;
+  font-size: 2em;
+  font-family: 'Planet Kosmos', sans-serif;
+  box-shadow: 0 0 10px rgba(8, 47, 59, 0.3);
+  border-radius: 3em;
+}
+
+.modal {
+  width: 30vw;
+  height: 90vh;
+  box-shadow: 0 0 10px rgba(8, 47, 59, 0.3);
+  border-radius: 3em;
+  background: rgba(4, 43, 54, 0.5);
+}
+
 .form__input {
-  padding: 10px;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  width: 300px;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  background-color: #222;
+  border-radius: 20%;
+  width: 50vw;
+  box-shadow: 0 0 10px rgba(74, 50, 85, 0.3);
+  background-color: rgba(0,0,0,0.7);
   text-align: center;
   color: #fff;
-  cursor:cell;
+  cursor: text;
+  font-size: 0.8em;
+  font-family: 'Crimson Text', sans-serif;
+  height: 2em;
+  transform: translateY(0.18em)
+}
+#uv-address::placeholder {
+  font-family: 'Alssential Free Trial', sans-serif;
 }
 
 a{
@@ -68,6 +89,27 @@ a{
   padding-left: 1px;
   text-align: center;
   align-self: center;
+  font-family: 'Alssential Free Trial', sans-serif;
+}
+
+#uv-form {
+  position: relative;
+  z-index: 1;
+  transform: translateY(-1em);
+}
+
+#uv-form::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  z-index: -1;
+  background: radial-gradient(circle, rgba(4, 43, 54, 0.8) 10%, rgba(26, 98, 192, 0) 70%);
+  mix-blend-mode: overlay; /* Adjust blending for the effect */
+  animation: spin 16s infinite linear;
+  border-radius: 2em;
 }
 
 .form__input::placeholder {
@@ -81,29 +123,21 @@ a{
 
 .form__input:focus {
   outline: none;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 5px rgba(154, 178, 206, 0.5);
 }
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-#footer {
+footer {
+  margin: 0;
+  bottom: 0;
   position: fixed;
   left: 0;
-  bottom: 0;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: #99ccff;
-  font-family: 'Open Sans', sans-serif;
-  width: 100%;
-  height:15px;
-  background-color: #000;
-  padding-top: 7.5px;
-  padding-bottom: 10px;
-  text-align: center;
-  color: #fff;
-  font-size: 14px;
+  padding: 0.25em;
 }
-
-#footer p {
-  margin: 0;
+footer a {
+  text-decoration: underline;
+  font-size: 1.4em;
+  margin-left: 1em;
+  opacity: 80%;
 }
 
 .fa {
@@ -114,4 +148,57 @@ a{
 
 .fa:hover {
   color: #aaa;
+}
+
+.datetime {
+  text-transform: lowercase;
+  font-size: 1.1em;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 1em;
+}
+
+.ocean {
+  height: 8%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #011c24;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+  position: absolute;
+  opacity: 30%;
+  width: 6400px;
+  top: -198px;
+  left: 0;
+  height: 198px;
+  transform: translate(0, 0, 0);
+  animation: wave 7s ease infinite;
+}
+
+.wave:nth-of-type(2) {
+  top: -168px;
+  animation: swell 4s ease infinite;
+  opacity: 30%;
+}
+
+@keyframes wave {
+  0% { margin-left: 0; }
+  100% { margin-left: -1600px;}
+}
+@keyframes swell {
+  0%, 100% {
+    transform: translate(0, -30px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+}
+
+footer a i {
+  font-size: 1.8em;
 }
