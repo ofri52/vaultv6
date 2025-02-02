@@ -1,4 +1,4 @@
-# AJH's Vault V6
+# AJH's Vault V6 <a href="https://discord.gg/UnDrzQQksw"><img style="height: 1em;" src="https://github.com/dheereshagrwal/colored-icons/raw/master/public/logos/discord/discord.svg"></a>
 The best UBG! Includes games, proxies, math tools, apps, customization, and more!
 
 [![Deploy to Heroku](https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg)](https://heroku.com/deploy/?template=https://github.com/1ajh/vaultv6)
@@ -16,15 +16,18 @@ The best UBG! Includes games, proxies, math tools, apps, customization, and more
 [![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/1ajh/vaultv6)
 [![Deploy to Cyclic](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/1ajh/vaultv6)
 
-If you encounter an issue with the site, please delineate it on the repository in the Issues tab!
+> [!TIP]
+> You can access all curated links for the site [here.](https://docs.google.com/document/d/14LlAmWkhchNJ83BhM3KFEk4MLhu5HERqlwljGJs6fN4/edit?usp=sharing)
 
 Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
-This work is licensed under a
-[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
-
-[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+> [!IMPORTANT]
+> This project is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].<br>
+> [![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
 
 [cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
+
+> [!NOTE]
+> If you encounter an issue with the site, please report it on the repository in the Issues tab! You can also add your own links you made for the website in the [Discord server](https://discord.gg/UnDrzQQksw) or in the Discussions tab.
