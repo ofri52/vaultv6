@@ -62,10 +62,10 @@ gtag('config', 'G-03F8ZHB8D8');
 </script>
 
 <style>
-            #games-list { display: flex; flex-wrap: wrap; gap: 1em; }
+            #games-list { display: flex; flex-wrap: wrap; gap: 1em; margin-bottom: 2em; }
             #games-list * { font-family: monospace; }
-        .game-card { width: 150px; text-align: center; background: #1e1e1e; padding: 10px; border-radius: 8px; }
-        .game-card img { width: 100px; height: 100px; object-fit: cover; border-radius: 5px; }
+        .game-card { width: 150px; text-align: center; background: #1e1e1e; border-radius: 1em; }
+        .game-card img { width: 100%; height: 12em; border-radius: 1em; }
         a { color: rgb(30, 182, 228); text-decoration: none; }
         body { overflow-y: scroll !important; }
         #content-alt { width: 50vw; margin-left: 25vw; }
@@ -214,6 +214,9 @@ gtag('config', 'G-03F8ZHB8D8');
       </script>
 
       <script>
+ function setFallbackImage(event) {
+    event.target.src = '/home/icons/placeholder.png';
+}
 
 document.addEventListener("DOMContentLoaded", async () => {
     const gamesList = document.getElementById("games-list");
@@ -241,20 +244,23 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const gameCard = document.createElement("div");
                 gameCard.classList.add("game-card");
 
-                // Construct the raw GitHub icon URL
-                const imageUrl = game.image; // Use the full GitHub URL directly
+                // Construct the image URL
+                const imageUrl = game.image;
 
+                // Create the game card's inner HTML
                 gameCard.innerHTML = `
-                    <a href="${game.link}" target="_blank">
-                        <img src="${imageUrl}" alt="${game.name}">
-                        <p>${game.name}</p>
-                    </a>
-                `;
+    <a href="/home/output.html?url=${encodeURIComponent(game.link)}" target="_blank">
+        <img src="${imageUrl}" alt="${game.name}" onerror="this.onerror=null;this.src='/home/icons/placeholder.png';">
+        <p>${game.name}</p>
+    </a>
+`;
+
+                // Append the card to the list
                 gamesList.appendChild(gameCard);
             });
         }
 
-        // Initial display
+        // Initial display of games
         displayGames(games);
 
         // Search and filter functionality
@@ -278,6 +284,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.error("Failed to load games:", error);
     }
 });
+
 
 
 
