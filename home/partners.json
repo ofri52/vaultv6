@@ -1,0 +1,26 @@
+[
+  {
+    "name": "UniUB",
+    "link": "https://jobi.billigerhost.com",
+    "image": "/home/icons/uniub.png",
+    "categories": [
+      "all"
+    ]
+  },
+  {
+    "name": "Desmos",
+    "link": "https://www.desmos.com/calculator",
+    "image": "https://preview.redd.it/8pubh285syd61.png?width=4096&format=png&auto=webp&s=6881b6aab2ba56d4c7e45b15201e181489330362",
+    "categories": [
+      "all"
+    ]
+  },
+  {
+    "name": "Gauth Math",
+    "link": "https://www.gauthmath.com/",
+    "image": "https://is2-ssl.mzstatic.com/image/thumb/Purple125/v4/1f/4a/47/1f4a4746-97ca-1913-623a-09798d1b0967/source/1200x1200bb.png",
+    "categories": [
+      "all"
+    ]
+  }
+]

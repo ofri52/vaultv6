@@ -96,7 +96,7 @@ const quotes = [
     "\"https://www.youtube.com/watch?v=xpVfcZ0ZcFM\" - ajh",
     "\"Dickhead Glorious Taft III; Cause of death: epiglottitis\" - ajh",
     "\"Mcdonalda mcodoble recpie -1 meat -top bred -botom bed -che   ese -mcdurmick sose -plciejcle -cook it\" - cts3696",
-    "\"And then hunt and then spit and then scrap yourself and then hunt for bears and then lick the honey then take off our pants and poop on top of nature \" - southernctrailfan",
+    "\"And then hunt and then spit and then scrap yourself and then hunt for bears and then lick the honey then take off our pants and poop on top of nature\" - southernctrailfan",
     "\"DADDY CUM ME INSIDE THE BAT’S PENIS BEFORE IT TURNS INTO A TESTED LIGHT BULB AND EXPLODE\" - southernctrailfan",
     "\"ROCCO YOU BETTA STAWT LISTENIN IF NOT YA NOT COMIN OUT NO MOA\" - a random guy in nj",
     "\"9 + 10 = 21\" - ajh",
@@ -107,7 +107,7 @@ const quotes = [
     "\"pronouns: X̌lawg / Vro💔\" - ajh",
     "\"congrats, you found a quote with no purpose other than the fact you found it\" - ajh",
     "\"30k users and counting\" - ajh",
-    "\"dearborn is cool 😄👍\" - ajh",
+    "\"youre cool 😄👍\" - ajh",
     "\"one of the fastest sites\" - ajh",
     "\"this site can cloak into google classroom but your dad cant cloak back into your family\" - ajh",
     "\"we love spacehey\" - ajh",
@@ -123,7 +123,13 @@ const quotes = [
     "\"my crush's initial is one of 26 letters\" - ajh",
     "\"sigma\" - ajh",
     "\"thats sigogglin\" - ajh but west virginian",
-    "\"helloooooooooooooooooooooooooooooooooooooooooooooooooooooo\" - ajh"
+    "\"helloooooooooooooooooooooooooooooooooooooooooooooooooooooo\" - ajh",
+    "\"this site can load apps that competitors cant!\" - ajh",
+    "\"ctrl shift qq\" - ajh",
+    "\"cuddling with natuski\" - pajammykid75",
+    "\"Munching on ur earlobe\" - bearcat",
+    "\"teeming with life\" - molkify",
+    "\"Dont think about it too much and if you cant, then get high\" - Grin",
     
 ];
 const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];

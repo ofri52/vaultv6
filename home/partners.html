@@ -60,38 +60,42 @@ dataLayer.push(arguments);
 gtag('js', new Date());
 gtag('config', 'G-03F8ZHB8D8');
 </script>
+
+<style>
+            #games-list { display: flex; flex-wrap: wrap; gap: 1em; margin-bottom: 2em; }
+        .game-card { text-align: center; background: rgba(3, 21, 27, 0.356); border-radius: 1em; }
+        .game-card img { width: 100%; height: 12em; border-radius: 1em; }
+        a { color: rgb(30, 182, 228); text-decoration: none; }
+        body { overflow-y: scroll !important; }
+        #content-alt { width: 50vw; margin-left: 25vw; }
+</style>
    
    </head>
    <body>
-      <div class="ocean">
-         <div class="wave"></div>
-         <div class="wave wave2"></div>
-       </div>
       <div id="particles-js"></div>
-      <div id="content">
-         <h1 class="lowtaperfade">vault v6</h1>
-         <p class="lowtaperfade2 quote-holder"><span class="quote-thing"></span></p>
-         <form id="uv-form" class="lowtaperfade3">
-            <input id="uv-search-engine" value="https://qwant.com/search?q=%s" type="hidden"/> 
-            <input id="uv-address" type="text" placeholder="Search the web" class="form__input"/>
-          </form>
-          <div class="desc left-margin">
-            <p id="uv-error"></p>
-            <pre id="uv-error-code"></pre>
-          </div>
-         <small style="font-size: 0.3em; font-family: monospace;">Welcome to the public beta! For now, please access games through here. Also, you may run into an error when you first search. <b>If you receive an error when searching, reload the page. If that doesn't work, try clicking the Register button! 😄</small>
+      <div id="content-alt" class="lowtaperfade3">
+         <div id="games-topbar">
+         <h1 class="lowtaperfade">partners</h1>
+         <input type="text" id="search-bar" style="display: none;" placeholder="Search for apps">
+         <select id="category-filter" style="display: none">
+             <option value="all">All</option>
+         </select>
+         </div>
+         <div id="games-list">
+
+         </div>
       </div>
       <nav>
-         <a href="/home" class="active"><i class="fa-solid fa-house"></i></a>
+         <a href="/home"><i class="fa-solid fa-house"></i></a>
          <a href="/home/g.html"><i class="fa-solid fa-gamepad"></i></a>
          <a href="/home/a.html"><i class="fa-solid fa-th"></i></a>
-         <a href="/home/math-tools.html"><i class="fa-solid fa-calculator"></i></a>
+         <a href="/home/learning.html"><i class="fa-solid fa-calculator"></i></a>
          <a href="/home"><i class="fa-solid fa-magnifying-glass"></i></a>
          <a href="https://docs.google.com/document/d/14LlAmWkhchNJ83BhM3KFEk4MLhu5HERqlwljGJs6fN4/edit?usp=sharing"><i class="fa-solid fa-link"></i></a>
             <a onclick="settingsModal()"><i class="fa-solid fa-ellipsis"></i></a>
            <a href="https://github.com/@1ajh/vaultv6"><i class="fa-brands fa-github"></i></a>
            <a href="https://discord.gg/UnDrzQQksw"><i class="fa-brands fa-discord"></i></a>
-           <a href="/home/partners.html"><i class="fa-solid fa-handshake"></i></a>
+           <a href="/home/partners.html" class="active"><i class="fa-solid fa-handshake"></i></a>
        </nav>
       <!-- <footer>
          <a href="https://ajh.boats">ajh.boats</a>
@@ -205,6 +209,83 @@ gtag('config', 'G-03F8ZHB8D8');
             },
             "retina_detect": true
          });
+      </script>
+
+      <script>
+ function setFallbackImage(event) {
+    event.target.src = '/home/icons/placeholder.png';
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const gamesList = document.getElementById("games-list");
+    const searchBar = document.getElementById("search-bar");
+    const categoryFilter = document.getElementById("category-filter");
+
+    try {
+        const response = await fetch("partners.json");
+        const games = await response.json();
+
+        // Populate category filter with unique categories
+        const categories = new Set();
+        games.forEach(game => game.categories.forEach(cat => categories.add(cat)));
+        categories.forEach(cat => {
+            const option = document.createElement("option");
+            option.value = cat;
+            option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+            categoryFilter.appendChild(option);
+        });
+
+        // Function to display games
+        function displayGames(filteredGames) {
+            gamesList.innerHTML = "";
+            filteredGames.forEach(game => {
+                const gameCard = document.createElement("div");
+                gameCard.classList.add("game-card");
+
+                // Construct the image URL
+                const imageUrl = game.image;
+
+                // Create the game card's inner HTML
+                gameCard.innerHTML = `
+    <a href="${encodeURIComponent(game.link)}">
+        <img src="${imageUrl}" alt="${game.name}" onerror="this.onerror=null;this.src='/home/icons/placeholder.png';">
+        <p>${game.name}</p>
+    </a>
+`;
+
+                // Append the card to the list
+                gamesList.appendChild(gameCard);
+            });
+        }
+
+        // Initial display of games
+        displayGames(games);
+
+        // Search and filter functionality
+        function filterGames() {
+            const searchText = searchBar.value.toLowerCase();
+            const selectedCategory = categoryFilter.value;
+
+            const filteredGames = games.filter(game =>
+                game.name.toLowerCase().includes(searchText) &&
+                (selectedCategory === "all" || game.categories.includes(selectedCategory))
+            );
+
+            displayGames(filteredGames);
+        }
+
+        // Event listeners
+        searchBar.addEventListener("input", filterGames);
+        categoryFilter.addEventListener("change", filterGames);
+
+    } catch (error) {
+        console.error("Failed to load games:", error);
+    }
+});
+
+
+
+
       </script>
       <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
          new Crate({

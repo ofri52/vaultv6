@@ -50,17 +50,9 @@ h1 {
   font-size: 2em;
 }
 
-h3, h1 {
+h3, h1, h2 {
   font-weight: normal;
   font-family: 'Planet Kosmos', sans-serif;
-}
-
-.modal {
-  width: 30vw;
-  height: 90vh;
-  box-shadow: 0 0 10px rgba(8, 47, 59, 0.3);
-  border-radius: 3em;
-  background: rgba(4, 43, 54, 0.5);
 }
 
 .form__input {
@@ -154,12 +146,30 @@ nav a, nav button {
   transition: all 0.3s ease;
 }
 
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(8, 47, 59, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(14, 83, 104, 0.7);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 84, 105, 0.9);
+  cursor: grab;
+}
+
 a:hover {
   cursor: pointer;
 }
 
 nav a:hover, nav button:hover {
-  background-color: rgba(8, 47, 59);
+  background-color: rgba(14, 83, 104, 0.555);
   color: #ffffff;
 }
 
@@ -332,7 +342,7 @@ footer a i {
   margin-bottom: 1em;
 }
 
-input, select {
+input, select, .btn {
   outline: none;
   border-radius: 1em;
   background: none;
@@ -343,7 +353,7 @@ input, select {
   margin-left: 1em;
 }
 
-input {
+input, .btn {
   height: 3em;
   margin-left: 3em;
   padding: 0.25em;
@@ -357,6 +367,9 @@ option {
 select {
   height: 3.8em;
 }
+.btn:hover, select option:hover, select:hover {
+  cursor: pointer;
+}
 
 ::placeholder {
   color: #fff;
@@ -365,4 +378,12 @@ select {
 
 ::-ms-input-placeholder { /* Edge 12 -18 */
   color: #fff;
+}
+
+.game-card {
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
 }

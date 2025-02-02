@@ -1,5 +1,13 @@
 [
     {
+      "name": "Poki",
+      "link": "https://poki.com",
+      "image": "https://s2.qwant.com/thumbr/300x300/d/a/475635d449b3dd52767710e8b369c57b06473f818c737748fc83024d67a79d/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.gkOgHlYykQ2EGuBh5ZwEjAAAAA%26pid%3DApi&q=0&b=1&p=0&a=0",
+      "categories": [
+        "all"
+      ]
+    },
+    {
       "name": "Fancade",
       "link": "https://play.fancade.com",
       "image": "/home/icons/kvNLsQnHoTkqKPWsD96tNhV7hftHW.jpg",
@@ -773,6 +781,16 @@
       ]
     },
     {
+      "name": "Chess",
+      "link": "https://chess.com/home",
+      "image": "https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/SamCopeland/phpmeXx6V.png",
+      "categories": [
+        "all",
+        "2P",
+        "Strategy"
+      ]
+    },
+    {
       "name": "Crazy Games",
       "link": "https://www.crazygames.com/",
       "image": "/home/icons/pAXxewqpUPfsgl1jD4GUpSIFGZrttm0zGcgne.webp",
@@ -822,6 +840,14 @@
       "name": "FNAF Web",
       "link": "https://wellsousaaa.github.io/Five-Nights-at-Freddys-Web/",
       "image": "/home/icons/4f0hH5hPQQon61RNl1e6JO.webp",
+      "categories": [
+        "all"
+      ]
+    },
+    {
+      "name": "Geotastic",
+      "link": "https://geotastic.net/home",
+      "image": "https://storage.ko-fi.com/cdn/useruploads/6691ce3a-02db-45a6-9827-aaf976ef050c.png",
       "categories": [
         "all"
       ]
@@ -906,13 +932,21 @@
       ]
     },
     {
+      "name": "Scrabble Tetris",
+      "link": "https://htwins.net/scrabbletetris/",
+      "image": "/home/icons/nhDedJRSO3hATOjfuS.webp",
+      "categories": [
+        "all",
+        "emulator"
+      ]
+    },
+    {
       "name": "Subway Surfers: San Francisco ",
       "link": "/e/2/subway-surfers/index.html",
       "image": "/home/icons/nhDedJRSO3hATOjfuS.webp",
       "categories": [
         "all",
-        "emulator",
-        "all"
+        "emulator"
       ]
     },
     {

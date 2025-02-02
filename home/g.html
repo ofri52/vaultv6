@@ -63,8 +63,7 @@ gtag('config', 'G-03F8ZHB8D8');
 
 <style>
             #games-list { display: flex; flex-wrap: wrap; gap: 1em; margin-bottom: 2em; }
-            #games-list * { font-family: monospace; }
-        .game-card { width: 150px; text-align: center; background: #1e1e1e; border-radius: 1em; }
+        .game-card { width: 12em; text-align: center; background: rgba(3, 21, 27, 0.356); border-radius: 1em; }
         .game-card img { width: 100%; height: 12em; border-radius: 1em; }
         a { color: rgb(30, 182, 228); text-decoration: none; }
         body { overflow-y: scroll !important; }
@@ -74,7 +73,7 @@ gtag('config', 'G-03F8ZHB8D8');
    </head>
    <body>
       <div id="particles-js"></div>
-      <div id="content-alt">
+      <div id="content-alt" class="lowtaperfade3">
          <div id="games-topbar">
          <h1 class="lowtaperfade">games</h1>
          <input type="text" id="search-bar" placeholder="Search for games">
@@ -87,10 +86,10 @@ gtag('config', 'G-03F8ZHB8D8');
          </div>
       </div>
       <nav>
-         <a href="/home" class="active"><i class="fa-solid fa-house"></i></a>
-         <a href="/home/g.html"><i class="fa-solid fa-gamepad"></i></a>
+         <a href="/home"><i class="fa-solid fa-house"></i></a>
+         <a href="/home/g.html" class="active"><i class="fa-solid fa-gamepad"></i></a>
          <a href="/home/a.html"><i class="fa-solid fa-th"></i></a>
-         <a href="/home/math-tools.html"><i class="fa-solid fa-calculator"></i></a>
+         <a href="/home/learning.html"><i class="fa-solid fa-calculator"></i></a>
          <a href="/home"><i class="fa-solid fa-magnifying-glass"></i></a>
          <a href="https://docs.google.com/document/d/14LlAmWkhchNJ83BhM3KFEk4MLhu5HERqlwljGJs6fN4/edit?usp=sharing"><i class="fa-solid fa-link"></i></a>
             <a onclick="settingsModal()"><i class="fa-solid fa-ellipsis"></i></a>
