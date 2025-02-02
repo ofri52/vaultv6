@@ -47,9 +47,11 @@ body {
 }
 
 h1 {
-  font-weight: normal;
   font-size: 2em;
-  border-radius: 3em;
+}
+
+h3, h1 {
+  font-weight: normal;
   font-family: 'Planet Kosmos', sans-serif;
 }
 
@@ -140,7 +142,7 @@ nav {
   box-shadow: 2px 0 5px rgba(15, 84, 105, 0.3);
 }
 
-nav a {
+nav a, nav button {
   color: #ccc;
   text-decoration: none;
   font-size: 2em;
@@ -153,12 +155,12 @@ nav a {
   transition: all 0.3s ease;
 }
 
-nav a:hover {
+nav a:hover, nav button:hover {
   background-color: rgba(8, 47, 59);
   color: #ffffff;
 }
 
-nav a.active {
+nav a.active, nav button.active {
   background-color: rgb(6, 38, 48);
   color: #ffffff;
 }
@@ -306,4 +308,58 @@ footer a i {
 }
 .lowtaperfade3 {
   animation-delay: 0.4s;
+}
+
+.search-output {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+}
+
+#games-topbar {
+  display: flex;
+  flex-direction: row;
+  height: 5em;
+  margin-bottom: 1em;
+}
+
+input, select {
+  outline: none;
+  border-radius: 1em;
+  background: none;
+  border: solid 2px #9b9b9b;
+  color: #fff;
+  font-family: monospace;
+  margin-top: 2em;
+  margin-left: 1em;
+}
+
+input {
+  height: 3em;
+  margin-left: 3em;
+  padding: 0.25em;
+}
+
+option {
+  background: #000;
+  font-family: monospace;
+}
+
+select {
+  height: 3.8em;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+  color: #fff;
 }

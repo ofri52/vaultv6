@@ -21,19 +21,22 @@ const error = document.getElementById("uv-error");
 const errorCode = document.getElementById("uv-error-code");
 
 form.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
-  try {
-    await registerSW();
-  } catch (err) {
-    error.textContent = "Failed to register service worker.";
-    errorCode.textContent = err.toString();
-    throw err;
-  }
-
-  const url = search(address.value, searchEngine.value);
-  location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
-});
+    event.preventDefault();
+  
+    try {
+      await registerSW();
+    } catch (err) {
+      error.textContent = "Failed to register service worker.";
+      errorCode.textContent = err.toString();
+      throw err;
+    }
+    const url = search(address.value, searchEngine.value);
+    const encodedUrl = __uv$config.prefix + __uv$config.encodeUrl(url);
+    sessionStorage.setItem("searchUrl", encodedUrl);
+    window.location.href = "output.html";
+  });
+  
+  
 
 const datetimeSpan = document.querySelector('.datetime');
 async function updateDateTimeAndBattery() {
@@ -81,6 +84,31 @@ const quotes = [
     "\"click the links icon for more links (no duh) and bookmark the doc\" - ajh",
     "\"vault is goated\" - ajh"
 ];
+const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+document.querySelector('.quote-thing').textContent = randomQuote;
 
-    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    document.querySelector('.quote-thing').textContent = randomQuote;
+
+const uvPrefix = '/home/'
+const ls = window.top.location.search;
+const urlParams = new URLSearchParams(ls );
+    
+let urlToProxy = urlParams.get('url');
+    
+    
+const xorEncode = {
+        encode(str) {
+            if (!str) return str;
+            return encodeURIComponent(
+                str
+                    .toString()
+                    .split('')
+                    .map((char, ind) =>
+                        ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char
+                     )
+                    .join('')
+            );
+        }
+    };
+    
+let proxiedUrl = uvPrefix + ${xorEncode.encode(urlToProxy)};
+document.getElementById('iframe').src = proxiedUrl;
