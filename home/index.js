@@ -82,33 +82,49 @@ const quotes = [
     "\"these games are ADA compliant, ♿/10\" - cts3696",
     "\"what the actual sigma\" - ajh",
     "\"click the links icon for more links (no duh) and bookmark the doc\" - ajh",
-    "\"vault is goated\" - ajh"
+    "\"vault is goated\" - ajh",
+    "\"to eat or not to eat\" - Kilonøx",
+    "\"random fact: vault has been in development since 2021\" - ajh",
+    "\"BOOKMARK THIS SITE\" - ajh",
+    "\"BOOKMARK THIS SITE AND THE LINK DOC\" - ajh",
+    "\"100% educational fr\" - ajh",
+    "\"thx jobi for bug fixes\" - ajh",
+    "\"why is molkify so gay\" - ajh",
+    "\"Kruger Kristi's basic ass burger makes me feel like Brian Griffin\" - cts3696",
+    "\"I edge until my micro soft\" - cts3696",
+    "\"𝓦𝓸𝓻𝓭 𝓟𝓻𝓮𝓭𝓲𝓬𝓽𝓲𝓸𝓷𝓼\" - ajh",
+    "\"https://www.youtube.com/watch?v=xpVfcZ0ZcFM\" - ajh",
+    "\"Dickhead Glorious Taft III; Cause of death: epiglottitis\" - ajh",
+    "\"Mcdonalda mcodoble recpie -1 meat -top bred -botom bed -che   ese -mcdurmick sose -plciejcle -cook it\" - cts3696",
+    "\"And then hunt and then spit and then scrap yourself and then hunt for bears and then lick the honey then take off our pants and poop on top of nature \" - southernctrailfan",
+    "\"DADDY CUM ME INSIDE THE BAT’S PENIS BEFORE IT TURNS INTO A TESTED LIGHT BULB AND EXPLODE\" - southernctrailfan",
+    "\"ROCCO YOU BETTA STAWT LISTENIN IF NOT YA NOT COMIN OUT NO MOA\" - a random guy in nj",
+    "\"9 + 10 = 21\" - ajh",
+    "\"go do great things\" - ajh",
+    "\"id recommend not using the proxy to watch porn\" - ajh",
+    "\"fun fact: 75% of 8th graders are not proficient in math\" - ajh",
+    "\"why is molkify so zesty\" - ajh",
+    "\"pronouns: X̌lawg / Vro💔\" - ajh",
+    "\"congrats, you found a quote with no purpose other than the fact you found it\" - ajh",
+    "\"30k users and counting\" - ajh",
+    "\"dearborn is cool 😄👍\" - ajh",
+    "\"one of the fastest sites\" - ajh",
+    "\"this site can cloak into google classroom but your dad cant cloak back into your family\" - ajh",
+    "\"we love spacehey\" - ajh",
+    "\"ajh.boats <- about me\" - ajh",
+    "\"hello chat\" - ajh",
+    "\"click that shiny purple button on the bottom right\" - ajh",
+    "\"youre cool for using this site\" - ajh",
+    "\"youre awesome for using this site\" - ajh",
+    "\"youre epic for using this site\" - ajh",
+    "\"skibidi toilet\" - ajh",
+    "\"2036 heat death\" - ajh",
+    "\"stupid endis\" - southernctrailfan's little brother",
+    "\"my crush's initial is one of 26 letters\" - ajh",
+    "\"sigma\" - ajh",
+    "\"thats sigogglin\" - ajh but west virginian",
+    "\"helloooooooooooooooooooooooooooooooooooooooooooooooooooooo\" - ajh"
+    
 ];
 const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 document.querySelector('.quote-thing').textContent = randomQuote;
-
-
-const uvPrefix = '/home/'
-const ls = window.top.location.search;
-const urlParams = new URLSearchParams(ls );
-    
-let urlToProxy = urlParams.get('url');
-    
-    
-const xorEncode = {
-        encode(str) {
-            if (!str) return str;
-            return encodeURIComponent(
-                str
-                    .toString()
-                    .split('')
-                    .map((char, ind) =>
-                        ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char
-                     )
-                    .join('')
-            );
-        }
-    };
-    
-let proxiedUrl = uvPrefix + ${xorEncode.encode(urlToProxy)};
-document.getElementById('iframe').src = proxiedUrl;

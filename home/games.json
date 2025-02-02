@@ -55,8 +55,7 @@
       "link": "https://swordbattle.io/",
       "image": "/home/icons/SATSlqrLyR3nvCiJxY7s9V.webp",
       "categories": [
-        "all",
-        "2d"
+        "all"
       ]
     },
     {
@@ -391,7 +390,7 @@
       "image": "/home/icons/xSRHS94JsSNRL5VYXY6y4OzH5xIQbtYFddtPCxn.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -529,7 +528,7 @@
       "image": "/home/icons/0JEn1ydND9eREAwimoyiVuE44Yh3eCwE4uSIDm.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -764,7 +763,7 @@
       "image": "/home/icons/01wa15vqVWq0sfZqWTUEoBqd.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ],
       "load": true
     },
@@ -782,7 +781,7 @@
       "link": "https://evades.io",
       "image": "/home/icons/4jQkZFTIAAhLY3iWmtZEEQJ9J.webp",
       "categories": [
-        "all,",
+        "all",
         "2P"
       ]
     },
@@ -791,7 +790,7 @@
       "link": "https://www.crazygames.com/game/bullet-force-multiplayer",
       "image": "/home/icons/Tce4tI1L4y6lnr3zdKoTD.webp",
       "categories": [
-        "all,",
+        "all",
         "2P"
       ]
     },
@@ -800,10 +799,10 @@
       "link": "https://www.crazygames.com/",
       "image": "/home/icons/pAXxewqpUPfsgl1jD4GUpSIFGZrttm0zGcgne.webp",
       "categories": [
-        "all,",
-        "emu,",
-        "2P,",
-        "sports,",
+        "all",
+        "emulator",
+        "2P",
+        "sports",
         "flash"
       ]
     },
@@ -812,7 +811,7 @@
       "link": "https://www.crazygames.com/game/cubes-2048-io",
       "image": "/home/icons/Du6DPYGbdT5qjJJLKcpm4S7.webp",
       "categories": [
-        "all,",
+        "all",
         "2P"
       ]
     },
@@ -821,8 +820,8 @@
       "link": "https://archive.org/details/doom-play",
       "image": "/home/icons/xllYoz5Wp8cmNdrXNpdN9EGuncJYjvx4ILdn.webp",
       "categories": [
-        "all,",
-        "emu"
+        "all",
+        "emulator"
       ]
     },
     {
@@ -870,8 +869,8 @@
       "link": "https://ds.44670.org/gba/",
       "image": "/home/icons/jCP6ts4SLNyyHXr.webp",
       "categories": [
-        "all,",
-        "emu"
+        "all",
+        "emulator"
       ]
     },
     {
@@ -879,8 +878,8 @@
       "link": "https://itch.io",
       "image": "/home/icons/WGBRHH4EP2B4nhBsBEH2Osptm.webp",
       "categories": [
-        "all,",
-        "emu,",
+        "all",
+        "emulator",
         "2P"
       ]
     },
@@ -897,8 +896,8 @@
       "link": "https://ds.44670.org/",
       "image": "/home/icons/GcZHBnDtcQHbX4Rh9ECkVg1S4Dz9lF5B8HUax.webp",
       "categories": [
-        "all,",
-        "emu"
+        "all",
+        "emulator"
       ]
     },
     {
@@ -906,8 +905,8 @@
       "link": "https://www.neilb.net/n64wasm/",
       "image": "/home/icons/Qy5CCKfsmgG7T4qT.webp",
       "categories": [
-        "all,",
-        "emu"
+        "all",
+        "emulator"
       ]
     },
     {
@@ -915,8 +914,8 @@
       "link": "https://playjs.purei.org/",
       "image": "/home/icons/UrdVpRWdb9LTQbhSsl.webp",
       "categories": [
-        "all,",
-        "emu"
+        "all",
+        "emulator"
       ]
     },
     {
@@ -924,7 +923,7 @@
       "link": "https://www.coolmathgames.com/0-run-3/play",
       "image": "/home/icons/AudIXhrPFeeG.webp",
       "categories": [
-        "all,",
+        "all",
         "flash"
       ]
     },
@@ -933,9 +932,9 @@
       "link": "/e/2/subway-surfers/index.html",
       "image": "/home/icons/nhDedJRSO3hATOjfuS.webp",
       "categories": [
-        "all,",
-        "emu",
-        "local"
+        "all",
+        "emulator",
+        "all"
       ]
     },
     {
@@ -943,8 +942,8 @@
       "link": "https://topoi.pooq.com/hendrik/notmine/FullScreenMario/mario.html",
       "image": "/home/icons/TVctxpMYR4VM0FvlFuYz4W1jGILDapYI9VBeQn.webp",
       "categories": [
-        "all,",
-        "emu"
+        "all",
+        "emulator"
       ]
     },
     {
@@ -952,8 +951,8 @@
       "link": "https://html5.gamedistribution.com/rvvASMiM/f1c451e586c04b4c8cba01b0c50d9090/index.html",
       "image": "/home/icons/lKa9r5UOGg0lFFD5zlMsthMa.webp",
       "categories": [
-        "all,",
-        "emu"
+        "all",
+        "emulator"
       ]
     },
     {
@@ -961,9 +960,9 @@
       "link": "/e/3/index.html",
       "image": "/home/icons/m6Z56Ept7X52DF4pAUWsfCe.webp",
       "categories": [
-        "all,",
-        "emu",
-        "local"
+        "all",
+        "emulator",
+        "all"
       ]
     },
     {
@@ -987,7 +986,7 @@
       "link": "https://jklm.fun",
       "image": "/home/icons/CWBrPfSh9GFP5UrHTcDe3.webp",
       "categories": [
-        "all,",
+        "all",
         "2P"
       ]
     },
@@ -997,7 +996,7 @@
       "image": "/home/icons/TgAH19LlMpj57y9EaKHGkui3Z4VG5ahwdcxC.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -1005,7 +1004,7 @@
       "link": "https://1v1.lol",
       "image": "/home/icons/UQFryp4dnh1hfWhqpSboSrlumGoxQVhjZmG.webp",
       "categories": [
-        "all,",
+        "all",
         "2P"
       ]
     },
@@ -1207,7 +1206,7 @@
       "image": "/home/icons/Uc1XdDrOFAwvAIK0L2fAniExSNHgyvDkcb.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -1248,7 +1247,7 @@
       "image": "/home/icons/pkBRKIygknboDFqzdH1D.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -1441,7 +1440,7 @@
       "image": "/home/icons/DA6JWXQliLD83ZoSswe7Y.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -1530,7 +1529,7 @@
       "image": "/home/icons/aOl5ieF2Zj2qdYpSucErwT7ANtoeYH3FVE.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -2092,7 +2091,7 @@
       "link": "https://zombsroyale.io",
       "image": "/home/icons/h9Uwm9HaewzyIL1m.webp",
       "categories": [
-        "all,",
+        "all",
         "2P"
       ]
     },
@@ -2110,7 +2109,7 @@
       "image": "/home/icons/nSPo4HCfp8W.png",
       "categories": [
         "all",
-        "emu"
+        "emulator"
       ]
     },
     {
@@ -2118,9 +2117,9 @@
       "link": "/e/2/retro/index.html",
       "image": "/home/icons/9tERKy08mbrnZ0AAlTUIiTx.webp",
       "categories": [
-        "all,",
+        "all",
         "sports",
-        "local"
+        "all"
       ]
     },
     {
@@ -2129,7 +2128,7 @@
       "image": "/home/icons/TQze0Ep8jrhhSe6qDE.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2139,7 +2138,7 @@
       "image": "/home/icons/3oIZOCnIyFa.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2149,7 +2148,7 @@
       "image": "/home/icons/mNqhIm0ayitHThpufOb2ytfpxdkrx.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2159,7 +2158,7 @@
       "image": "/home/icons/WWvmc0hw1epMot9kYVLL.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2169,7 +2168,7 @@
       "image": "/home/icons/IaTdhrN06IHvTKMRnUilTaCsiyXnRZL.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2179,7 +2178,7 @@
       "image": "/home/icons/D8NZMlS0Yn65gpeNm.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2189,7 +2188,7 @@
       "image": "/home/icons/ptS3ITeTcxi.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2199,7 +2198,7 @@
       "image": "/home/icons/GbjBYcD7WCSTM901.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2209,7 +2208,7 @@
       "image": "/home/icons/yF1h2IrSDEe0O4ZuJfMzikPd414i89LJ.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2219,7 +2218,7 @@
       "image": "/home/icons/FBNnhV87cTCWQoYw7uLnx3eJbh3dKUcAYYc7kC0S.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2229,7 +2228,7 @@
       "image": "/home/icons/6sFyW8lm5QxA01.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2239,7 +2238,7 @@
       "image": "/home/icons/r3bPLwEPh6pSHTnwS5Qqph5y2J70o8o3.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2249,7 +2248,7 @@
       "image": "/home/icons/hvXUMPehUfEdoOz6f9OR1GTwXcSX.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2259,7 +2258,7 @@
       "image": "/home/icons/VWlPkcuNIr.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2269,7 +2268,7 @@
       "image": "/home/icons/0e9Eknd4ZS31hgTiL1UarTdIXu59K.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2279,7 +2278,7 @@
       "image": "/home/icons/9DoVTwfWzuUO3.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2289,7 +2288,7 @@
       "image": "/home/icons/xGtTJoczkV5rWouIblNkykgE75sLHdtmNhk3SZ.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2299,7 +2298,7 @@
       "image": "/home/icons/gcW2DeA1lnA3ja3kXO5wNMwrVAszcAaZNkgJMhU.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2309,7 +2308,7 @@
       "image": "/home/icons/Hf8kV58JuuM.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2319,7 +2318,7 @@
       "image": "/home/icons/vxioxO6NdzJxfxCqctTFFtUPxrXoxHyeF.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2329,7 +2328,7 @@
       "image": "/home/icons/SbGgGTQbqmEEENywajH.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2339,7 +2338,7 @@
       "image": "/home/icons/djOQkhq6UaJz.webp",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2349,7 +2348,7 @@
       "image": "/home/icons/None",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2359,7 +2358,7 @@
       "image": "/home/icons/None",
       "categories": [
         "all",
-        "emu",
+        "emulator",
         "android"
       ]
     },
@@ -2369,7 +2368,7 @@
       "image": "/home/icons/3zBLPwpsynRFNUochxiug.webp",
       "categories": [
         "all",
-        "emu"
+        "emulator"
       ]
     },
     {
@@ -2451,8 +2450,8 @@
       "categories": [
         "all",
         "2P",
-        "emu",
-        "local"
+        "emulator",
+        "all"
       ]
     },
     {
@@ -2462,8 +2461,8 @@
       "categories": [
         "all",
         "2P",
-        "emu",
-        "local"
+        "emulator",
+        "all"
       ]
     },
     {
@@ -2482,7 +2481,7 @@
       "categories": [
         "all",
         "2P",
-        "emu"
+        "emulator"
       ],
       "blank": "true"
     },
@@ -2492,7 +2491,7 @@
       "image": "/home/icons/Nze2ylXZrJqOBXF3tgSdWQtOWS9XOXkcmIGf.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -2501,7 +2500,7 @@
       "image": "/home/icons/Nze2ylXZrJqOBXF3tgSdWQtOWS9XOXkcmIGf.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -2510,7 +2509,7 @@
       "image": "/home/icons/IMugoq6FwO6SAJz4mNF.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -2519,7 +2518,7 @@
       "image": "/home/icons/tLwL4kzKKmmrOfcChYZul.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -2528,7 +2527,7 @@
       "image": "/home/icons/9B4sx19ptQle60J63Sh.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -2537,7 +2536,7 @@
       "image": "/home/icons/Apxz8P0ioPX3ZEQ321STABjzQFR.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -2546,7 +2545,7 @@
       "image": "/home/icons/JhnanHU09C2VB4Y1K.webp",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -2563,7 +2562,7 @@
       "image": "/home/icons/Wp61JnjmPom.webp",
       "categories": [
         "all",
-        "emu"
+        "emulator"
       ]
     },
     {
@@ -2611,8 +2610,7 @@
       "link": "https://g.deev.is/fnaw/",
       "image": "/home/icons/9I9H3kOedN4.webp",
       "categories": [
-        "all",
-        "game"
+        "all"
       ]
     },
     {
@@ -2629,7 +2627,7 @@
       "image": "/home/icons/xMCh2eWln2.png",
       "categories": [
         "all",
-        "local"
+        "all"
       ]
     },
     {
@@ -2638,7 +2636,7 @@
       "image": "/home/icons/k2hhio9RF9z9uJTpMJ6Vs1.jpg",
       "categories": [
         "all",
-        "emu"
+        "emulator"
       ]
     },
     {
@@ -2647,7 +2645,7 @@
       "image": "/home/icons/oF6ju8n1KN2nX94t4Tj7n6caNXMYw.jpg",
       "categories": [
         "all",
-        "emu"
+        "emulator"
       ]
     },
     {
@@ -2703,8 +2701,8 @@
       "link": "/e/1/particle-clicker/index.html",
       "image": "/home/icons/YwhgrPGI3UU.png",
       "categories": [
-        "all,",
-        "local"
+        "all",
+        "all"
       ]
     },
     {
@@ -2729,7 +2727,7 @@
       "image": "/home/icons/kxHE4JqVGaKUZwJBg.jpg",
       "categories": [
         "all",
-        "emu"
+        "emulator"
       ]
     },
     {
@@ -2754,7 +2752,7 @@
       "image": "/home/icons/zjNjnhMGpnhr1enMxR.jpg",
       "categories": [
         "all",
-        "emu"
+        "emulator"
       ]
     },
     {
@@ -2779,7 +2777,7 @@
       "image": "/home/icons/NZfPHIBtXqfJobCkM.png",
       "categories": [
         "all",
-        "emu"
+        "emulator"
       ]
     },
     {
@@ -2788,7 +2786,7 @@
       "image": "/home/icons/oldJ7eH1rPQdirqbnrCmAx.jpg",
       "categories": [
         "all",
-        "emu"
+        "emulator"
       ]
     },
     {
@@ -2820,8 +2818,7 @@
       "link": "https://y8.com/",
       "image": "/home/icons/Qj3wiqzGYHk0qHzaL2N3Nt7xY5jz6qaROq.webp",
       "categories": [
-        "all",
-        "game"
+        "all"
       ]
     },
     {

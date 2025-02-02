@@ -29,7 +29,7 @@
 
    <!-- Discord Embed -->
    <meta property="og:site_name" content="AJH's Vault V6">
-   <meta name="theme-color" content="#D17B2F">
+   <meta name="theme-color" content="#1581b2">
 
    <!-- Structured Data Schema -->
    <script type="application/ld+json">
@@ -65,45 +65,59 @@ gtag('config', 'G-03F8ZHB8D8');
    <body>
       <iframe class="search-output" id="output-specific" src=""></iframe>
       <nav>
-         <a href="/home" class="active"><i class="fa-solid fa-house"></i></a>
-         <a href="/home/g"><i class="fa-solid fa-gamepad"></i></a>
-         <a href="/home/a"><i class="fa-solid fa-th"></i></a>
-         <a href="/home/math-tools"><i class="fa-solid fa-calculator"></i></a>
-         <a href="/home"><i class="fa-solid fa-magnifying-glass"></i></a>
-         <a href="https://docs.google.com/document/d/14LlAmWkhchNJ83BhM3KFEk4MLhu5HERqlwljGJs6fN4/edit?usp=sharing"><i class="fa-solid fa-link"></i></a>
-         <div class="bottom-icons">
-           <a href="https://github.com/@1ajh/vaultv6"><i class="fa-brands fa-github"></i></a>
-           <a href="https://discord.gg/UnDrzQQksw"><i class="fa-brands fa-discord"></i></a>
-           <a href="/s"><i class="fa-solid fa-ellipsis"></i></a>
-         </div>
-       </nav>
+        <a href="/home" class="active"><i class="fa-solid fa-house"></i></a>
+        <a href="/home/g.html"><i class="fa-solid fa-gamepad"></i></a>
+        <a href="/home/a.html"><i class="fa-solid fa-th"></i></a>
+        <a href="/home/math-tools.html"><i class="fa-solid fa-calculator"></i></a>
+        <a href="/home"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="https://docs.google.com/document/d/14LlAmWkhchNJ83BhM3KFEk4MLhu5HERqlwljGJs6fN4/edit?usp=sharing"><i class="fa-solid fa-link"></i></a>
+        <div class="bottom-icons">
+          <a href="https://github.com/@1ajh/vaultv6"><i class="fa-brands fa-github"></i></a>
+          <a href="https://discord.gg/UnDrzQQksw"><i class="fa-brands fa-discord"></i></a>
+          <button onclick="settingsModal()"><i class="fa-solid fa-ellipsis"></i></button>
+        </div>
+      </nav>
       <!-- <footer>
          <a href="https://ajh.boats">ajh.boats</a>
          <a href="https://discord.gg/UnDrzQQksw">discord server</a>
       </footer> -->
       <script>
-        window.onload = () => {
-          const iframe = document.getElementById("output-specific");
-          const storedUrl = sessionStorage.getItem("searchUrl");
-          console.log("Retrieved search URL:", storedUrl);
-          if (storedUrl) {
-            iframe.src = storedUrl;
-          } else {
-            console.error("No search URL found.");
-          }
-        };
-      </script>
-      <script src="uv/uv.bundle.js" defer></script>
-      <script src="uv/uv.config.js" defer></script>
-      <script src="register-sw.js" defer></script>
-      <script src="search.js" defer></script>
-      <script src="index.js" defer></script>
+const uvPrefix = '/home/tiw/'
+const ls = window.top.location.search;
+const urlParams = new URLSearchParams(ls);
     
-      <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
-         new Crate({
-             server: '1260507272375963708', // AJH's Services 🪐
-             channel: '1260507272854110240' // #🥂┆general
-         })
+let urlToProxy = urlParams.get('url');
+    
+const xorEncode = {
+        encode(str) {
+            if (!str) return str;
+            return encodeURIComponent(
+                str
+                    .toString()
+                    .split('')
+                    .map((char, ind) =>
+                        ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char
+                     )
+                    .join('')
+            );
+        }
+    };
+
+
+if (urlToProxy){
+    let proxiedUrl = uvPrefix + xorEncode.encode(urlToProxy);
+    console.log('src is now ' + proxiedUrl)
+    document.getElementById('output-specific').src = proxiedUrl;
+} else{
+  const iframe = document.getElementById("output-specific");
+  const storedUrl = sessionStorage.getItem("searchUrl");
+  console.log("Retrieved search URL:", storedUrl);
+  if (storedUrl) {
+      iframe.src = storedUrl;
+  } else {
+      console.error("No search URL found.");
+  }
+}
      </script>
    </body>
 </html>
