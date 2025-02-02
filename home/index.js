@@ -36,8 +36,6 @@ form.addEventListener("submit", async (event) => {
 });
 
 const datetimeSpan = document.querySelector('.datetime');
-
-// Function to update date, time, and battery
 async function updateDateTimeAndBattery() {
     const now = new Date();
     const options = { 
@@ -48,19 +46,14 @@ async function updateDateTimeAndBattery() {
     };
     const date = now.toLocaleDateString('en-US', options);
     const time = now.toLocaleTimeString('en-US', { hour12: false });
-
     try {
         const battery = await navigator.getBattery();
         const level = (battery.level * 100).toFixed(0);
         const charging = battery.charging ? "Charging" : "Not Charging";
-
         datetimeSpan.textContent = `${date} ${time} | Battery: ${level}% (${charging})`;
-
-        // Listen for battery level or charging status changes
         battery.addEventListener('levelchange', () => {
             datetimeSpan.textContent = `${date} ${time} | Battery: ${(battery.level * 100).toFixed(0)}% (${battery.charging ? "Charging" : "Not Charging"})`;
         });
-
         battery.addEventListener('chargingchange', () => {
             datetimeSpan.textContent = `${date} ${time} | Battery: ${(battery.level * 100).toFixed(0)}% (${battery.charging ? "Charging" : "Not Charging"})`;
         });
@@ -68,13 +61,26 @@ async function updateDateTimeAndBattery() {
         datetimeSpan.textContent = `${date} ${time} | Battery status not supported`;
     }
 }
-
-// Initialize updates
 setInterval(() => {
     const now = new Date();
     const date = now.toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
     const time = now.toLocaleTimeString('en-US', { hour12: false });
     datetimeSpan.textContent = `${date} ${time}`;
-}, 1000); // Update time every second
+}, 1000);
+updateDateTimeAndBattery();
 
-updateDateTimeAndBattery(); // Fetch date, time, and battery
+const quotes = [
+    "\"Faster than 99% of other proxies!\" - ajh",
+    "\"Thank you for using vault :)\" - ajh",
+    "\"The best way to predict the future is to create it\" - Peter Drucker",
+    "\"You miss 100% of the shots you don't take\" - Wayne Gretzky",
+    "\"Lock in on school vro💔\" - ajh",
+    "\"THIS SITE ACTUALLY HAS EDUCATIONAL ASPECTS\" - ajh",
+    "\"these games are ADA compliant, ♿/10\" - cts3696",
+    "\"what the actual sigma\" - ajh",
+    "\"click the links icon for more links (no duh) and bookmark the doc\" - ajh",
+    "\"vault is goated\" - ajh"
+];
+
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    document.querySelector('.quote-thing').textContent = randomQuote;

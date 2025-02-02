@@ -1,4 +1,4 @@
-importScripts("/static/uv/uv.sw.js");
+importScripts("/home/uv/uv.sw.js");
 
 const sw = new UVServiceWorker();
 

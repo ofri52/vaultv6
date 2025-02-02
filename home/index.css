@@ -49,9 +49,8 @@ body {
 h1 {
   font-weight: normal;
   font-size: 2em;
-  font-family: 'Planet Kosmos', sans-serif;
-  box-shadow: 0 0 10px rgba(8, 47, 59, 0.3);
   border-radius: 3em;
+  font-family: 'Planet Kosmos', sans-serif;
 }
 
 .modal {
@@ -72,7 +71,7 @@ h1 {
   color: #fff;
   cursor: text;
   font-size: 0.8em;
-  font-family: 'Crimson Text', sans-serif;
+  font-family: monospace;
   height: 2em;
   transform: translateY(0.18em)
 }
@@ -96,6 +95,7 @@ a{
   position: relative;
   z-index: 1;
   transform: translateY(-1em);
+  font-size: 0.95em;
 }
 
 #uv-form::after {
@@ -125,24 +125,70 @@ a{
   outline: none;
   box-shadow: 0 0 5px rgba(154, 178, 206, 0.5);
 }
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  padding: 0.5em;
+  background-color: rgba(8, 47, 59, 0.3);;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 0 5px rgba(15, 84, 105, 0.3);
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  margin: 0.25em 0;
+  border-radius: 0.5em;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(8, 47, 59);
+  color: #ffffff;
+}
+
+nav a.active {
+  background-color: rgb(6, 38, 48);
+  color: #ffffff;
+}
+
+.bottom-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 0.5em 0;
+}
+
+footer a {
+  text-decoration: underline;
+  font-size: 1.4em;
+  opacity: 80%;
+}
+
 footer {
   margin: 0;
   bottom: 0;
   position: fixed;
-  left: 0;
-  padding: 0.25em;
+  right: 0;
+  padding: 0.5em;
 }
+
 footer a {
-  text-decoration: underline;
-  font-size: 1.4em;
   margin-left: 1em;
-  opacity: 80%;
 }
 
 .fa {
-  font-size: 24px;
-  margin-right: 10px;
   color: #fff;
 }
 
@@ -151,7 +197,6 @@ footer a {
 }
 
 .datetime {
-  text-transform: lowercase;
   font-size: 1.1em;
   position: fixed;
   right: 0;
@@ -201,4 +246,64 @@ footer a {
 
 footer a i {
   font-size: 1.8em;
+}
+
+@keyframes fadeSlideUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.lowtaperfade {
+  animation: fadeSlideUp 0.8s ease-out forwards;
+}
+
+
+@keyframes fadeSlideUp {
+  from {
+      opacity: 0;
+      transform: translateY(1em);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideUpForQuoteHolder {
+  from {
+      opacity: 0;
+      transform: translateY(-1em);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(-2em);
+  }
+}
+
+.quote-holder {
+  font-size: 0.5em;
+}
+
+.quote-thing {
+  font-family: monospace;
+}
+
+.lowtaperfade, .lowtaperfade3 {
+  animation: fadeSlideUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.lowtaperfade2 {
+  animation-delay: 0.2s;
+  animation: fadeSlideUpForQuoteHolder 0.8s ease-out forwards;
+  opacity: 0;
+}
+.lowtaperfade3 {
+  animation-delay: 0.4s;
 }
