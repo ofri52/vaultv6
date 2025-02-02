@@ -13,8 +13,7 @@
       "image": "/home/icons/FHLuaDMnRvpktf0cfmD0tjytNQ.webp",
       "categories": [
         "all"
-      ],
-      "blank": "true"
+      ]
     },
     {
       "name": "Gartic Phone",
@@ -39,16 +38,6 @@
       "categories": [
         "all"
       ]
-    },
-    {
-      "name": "Steam Store",
-      "link": "https://store.steampowered.com/",
-      "image": "/home/icons/iDMHLPdRtfO1exvuaI4x39.webp",
-      "categories": [
-        "all"
-      ],
-      "say": "Steam can't actually be added because it's an app, not a website. This only lets you browse the Steam website, you can't actually play any games unless you use Geforce Now.",
-      "partial": true
     },
     {
       "name": "Swordbattle.io",
@@ -129,15 +118,6 @@
       "image": "/home/icons/82SjsVV8EmtEo.webp",
       "categories": [
         "all"
-      ]
-    },
-    {
-      "name": "Lostgamer",
-      "link": "https://lostgamer.io",
-      "image": "/home/icons/V4VszdrXInt3UIQBmFUf.webp",
-      "categories": [
-        "all",
-        "2P"
       ]
     },
     {
@@ -467,9 +447,7 @@
       "image": "/home/icons/WZW8oq8z1DrkK0ZtepWAU1u.webp",
       "categories": [
         "all"
-      ],
-      "error": "true",
-      "say": "Neal.fun does not work on Interstellar because of Cloudflare protection."
+      ]
     },
     {
       "name": "YoHoHo.io",
@@ -2482,8 +2460,7 @@
         "all",
         "2P",
         "emulator"
-      ],
-      "blank": "true"
+      ]
     },
     {
       "name": "2048",
@@ -2801,14 +2778,6 @@
       "name": "Worlds Hardest Game 2",
       "link": "https://selenite.cc/semag/worldshardestgame2/index.html",
       "image": "/home/icons/qfgvA1L1cdw9syp4QJFG7E2.jpg",
-      "categories": [
-        "all"
-      ]
-    },
-    {
-      "name": "NZ:P",
-      "link": "https://nzp.gay",
-      "image": "/home/icons/073l646ER8ETp3ePNHR8YcOz3oto.png",
       "categories": [
         "all"
       ]

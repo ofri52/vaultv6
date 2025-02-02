@@ -1,0 +1,34 @@
+[
+    {
+      "name": "Amazon Luna",
+      "link": "https://luna.amazon.com/",
+      "image": "/home/icons/FHLuaDMnRvpktf0cfmD0tjytNQ.webp",
+    },
+    {
+      "name": "Discord",
+      "link": "https://discord.com/channels/@me",
+      "image": "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxsG72wAo9EWJR4yQWyJJaDb6rYcBtJvTvH3UoAS4JFNDaxGhmKNaMwgElLURlRFeVkLCjkfnXmWtINWZIrPGYq0-&format=source&h=210",
+    },
+    {
+      "name": "Fancade",
+      "link": "https://play.fancade.com",
+      "image": "/home/icons/kvNLsQnHoTkqKPWsD96tNhV7hftHW.jpg",
+    },
+    {
+      "name": "Newgrounds",
+      "link": "https://newgrounds.com/",
+      "image": "/home/icons/rmp6plH5FtyEejWE4l9bQb.webp",
+    },
+    {
+      "name": "Now.GG (NowGG.me) [Working]",
+      "link": "https://nowgg.me",
+      "image": "/home/icons/None",
+    },
+    {
+      "name": "Steam Store",
+      "link": "https://store.steampowered.com/",
+      "image": "/home/icons/iDMHLPdRtfO1exvuaI4x39.webp",
+      "say": "Steam can't actually be added because it's an app, not a website. This only lets you browse the Steam website, you can't actually play any games unless you use Geforce Now.",
+      "partial": true
+    }
+  ]

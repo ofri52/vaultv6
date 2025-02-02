@@ -76,7 +76,7 @@ gtag('config', 'G-03F8ZHB8D8');
       <div id="particles-js"></div>
       <div id="content-alt">
          <div id="games-topbar">
-         <h1 class="lowtaperfade">games</h1>
+         <h1 class="lowtaperfade">apps</h1>
          <input type="text" id="search-bar" placeholder="Search for games">
          <select id="category-filter">
              <option value="all">All</option>
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const categoryFilter = document.getElementById("category-filter");
 
     try {
-        const response = await fetch("games.json");
+        const response = await fetch("apps.json");
         const games = await response.json();
 
         // Populate category filter with unique categories
@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 // Create the game card's inner HTML
                 gameCard.innerHTML = `
-    <a href="/home/output.html?url=${encodeURIComponent(game.link)}">
+    <a href="/home/output.html?url=${encodeURIComponent(game.link)}" target="_blank">
         <img src="${imageUrl}" alt="${game.name}" onerror="this.onerror=null;this.src='/home/icons/placeholder.png';">
         <p>${game.name}</p>
     </a>
