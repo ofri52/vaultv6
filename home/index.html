@@ -102,24 +102,6 @@ gtag('config', 'G-03F8ZHB8D8');
         input:checked + .slider:before {
             transform: translateX(20px);
         }
-        .ocean {
-            width: 100%;
-            height: 100px;
-            background: lightblue;
-            position: relative;
-            overflow: hidden;
-            display: none;
-        }
-        .wave {
-            position: absolute;
-            width: 100%;
-            height: 100px;
-            background: rgba(0, 0, 255, 0.3);
-            top: 0;
-        }
-        .wave2 {
-            background: rgba(0, 0, 255, 0.6);
-        }
         .modal {
             display: none;
             position: fixed;
@@ -161,7 +143,7 @@ gtag('config', 'G-03F8ZHB8D8');
 </style>
    </head>
    <body>
-      <div class="ocean">
+      <div class="ocean" id="ocean">
          <div class="wave"></div>
          <div class="wave wave2"></div>
        </div>
@@ -248,38 +230,8 @@ gtag('config', 'G-03F8ZHB8D8');
           </div>
       </div>
 
-      <script>
-         document.addEventListener("DOMContentLoaded", function() {
-             const toggle = document.getElementById("waveToggle");
-             const oceanWrapper = document.getElementById("oceanWrapper");
-             
-             function updateVisibility() {
-                 if (localStorage.getItem("wavesDisabled") === "true") {
-                     oceanWrapper.innerHTML = "";
-                     toggle.checked = true;
-                 } else {
-                     if (!oceanWrapper.innerHTML.trim()) {
-                         oceanWrapper.innerHTML = '<div class="ocean">\n<div class="wave"></div>\n<div class="wave wave2"></div>\n</div>';
-                     }
-                     toggle.checked = false;
-                 }
-             }
-             
-             toggle.addEventListener("change", function() {
-                 localStorage.setItem("wavesDisabled", toggle.checked);
-                 updateVisibility();
-             });
-             
-             updateVisibility();
-         });
- 
-         function settingsModal() {
-             document.getElementById("settingsModal").style.display = "block";
-         }
-         function closeModal() {
-             document.getElementById("settingsModal").style.display = "none";
-         }
-     </script>
+
+
 
       <script>
          particlesJS("particles-js", {

@@ -1,6 +1,8 @@
 self.__uv$config = {
     prefix: '/home/tiw/',
-    bare:'https://bare.benrogo.net',
+    bare: [
+        'https://bare.benrogo.net',
+    ],
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/home/uv/uv.handler.js',

@@ -92,7 +92,6 @@ gtag('config', 'G-03F8ZHB8D8');
          <a href="/home/learning.html"><i class="fa-solid fa-calculator"></i></a>
          <a href="/home"><i class="fa-solid fa-magnifying-glass"></i></a>
          <a href="https://docs.google.com/document/d/14LlAmWkhchNJ83BhM3KFEk4MLhu5HERqlwljGJs6fN4/edit?usp=sharing"><i class="fa-solid fa-link"></i></a>
-            <a onclick="settingsModal()"><i class="fa-solid fa-ellipsis"></i></a>
            <a href="https://github.com/1ajh/vaultv6"><i class="fa-brands fa-github"></i></a>
            <a href="https://discord.gg/UnDrzQQksw"><i class="fa-brands fa-discord"></i></a>
            <a href="/home/partners.html"><i class="fa-solid fa-handshake"></i></a>
@@ -106,6 +105,8 @@ gtag('config', 'G-03F8ZHB8D8');
       <script src="register-sw.js" defer></script>
       <script src="search.js" defer></script>
       <script src="index.js" defer></script>
+
+      
       <script>
          particlesJS("particles-js", {
             "particles": {
@@ -224,8 +225,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         const response = await fetch("games.json");
         const games = await response.json();
-
-        // Populate category filter with unique categories
         const categories = new Set();
         games.forEach(game => game.categories.forEach(cat => categories.add(cat)));
         categories.forEach(cat => {
@@ -234,34 +233,23 @@ document.addEventListener("DOMContentLoaded", async () => {
             option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
             categoryFilter.appendChild(option);
         });
-
-        // Function to display games
         function displayGames(filteredGames) {
             gamesList.innerHTML = "";
             filteredGames.forEach(game => {
                 const gameCard = document.createElement("div");
                 gameCard.classList.add("game-card");
-
-                // Construct the image URL
                 const imageUrl = game.image;
-
-                // Create the game card's inner HTML
                 gameCard.innerHTML = `
-    <a href="/home/output.html?url=${encodeURIComponent(game.link)}">
-        <img src="${imageUrl}" alt="${game.name}" onerror="this.onerror=null;this.src='/home/icons/placeholder.png';">
-        <p>${game.name}</p>
-    </a>
-`;
-
-                // Append the card to the list
+                     <a href="/home/output.html?url=${encodeURIComponent(game.link)}">
+                           <img src="${imageUrl}" alt="${game.name}" onerror="this.onerror=null    ;this.src='/home/icons/placeholder.png';">
+                           <p>${game.name}</p>
+                     </a>
+                  `;
                 gamesList.appendChild(gameCard);
             });
         }
-
-        // Initial display of games
         displayGames(games);
 
-        // Search and filter functionality
         function filterGames() {
             const searchText = searchBar.value.toLowerCase();
             const selectedCategory = categoryFilter.value;
@@ -274,7 +262,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             displayGames(filteredGames);
         }
 
-        // Event listeners
         searchBar.addEventListener("input", filterGames);
         categoryFilter.addEventListener("change", filterGames);
 
@@ -282,15 +269,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.error("Failed to load games:", error);
     }
 });
-
-
-
-
       </script>
+      
       <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
          new Crate({
-             server: '1260507272375963708', // AJH's Services 🪐
-             channel: '1260507272854110240' // #🥂┆general
+             server: '1260507272375963708',
+             channel: '1260507272854110240'
          })
      </script>
    </body>

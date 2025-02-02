@@ -72,6 +72,59 @@ setInterval(() => {
 }, 1000);
 updateDateTimeAndBattery();
 
+document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.getElementById("waveToggle");
+    const ocean = document.getElementById("ocean");
+    
+    function updateVisibility() {
+        if (localStorage.getItem("wavesDisabled") === "true") {
+            ocean.style.display = "none";
+            toggle.checked = true;
+        } else {
+            ocean.style.display = "block";
+            toggle.checked = false;
+        }
+    }
+    
+    toggle.addEventListener("change", function() {
+        localStorage.setItem("wavesDisabled", toggle.checked);
+        updateVisibility();
+    });
+    
+    updateVisibility();
+});
+
+function settingsModal() {
+    document.getElementById("settingsModal").style.display = "block";
+}
+function closeModal() {
+    document.getElementById("settingsModal").style.display = "none";
+}
+document.addEventListener("DOMContentLoaded", function() {
+   const toggle = document.getElementById("particlesToggle");
+   const particles = document.getElementById("particles-js");
+   function updateVisibility() {
+      if (localStorage.getItem("particlesDisabled") === "true") {
+            particles.style.display = "none";
+            toggle.checked = true;
+      } else {
+            particles.style.display = "block";
+            toggle.checked = false;
+      }
+   }
+   toggle.addEventListener("change", function() {
+      localStorage.setItem("particlesDisabled", toggle.checked);
+      updateVisibility();
+   });
+   updateVisibility();
+});
+function settingsModal() {
+   document.getElementById("settingsModal").style.display = "block";
+}
+function closeModal() {
+   document.getElementById("settingsModal").style.display = "none";
+}
+
 const quotes = [
     "\"Faster than 99% of other proxies!\" - ajh",
     "\"Thank you for using vault :)\" - ajh",
@@ -134,3 +187,4 @@ const quotes = [
 ];
 const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 document.querySelector('.quote-thing').textContent = randomQuote;
+
