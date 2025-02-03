@@ -290,7 +290,9 @@ async function __uvHook(window, config = {}, bare = '/bare/') {
             case 'HEAD':
                 event.data.value = __uv.sourceHtml(
                     event.data.value.replace(/<head(.*)>(.*)<\/head>/s, '<op-head$1>$2</op-head>')
-                ).replace(/<op-head(.*)>(.*)<\/op-head>/s, '<head$1>$2</head>');
+                ).replace(/<op-head(.*)>(.*)<\/op-head>/s, '<head$1>$2<link rel="manifest" href="/home/manifest.json">
+
+</head>');
                 break;
             case 'BODY':
                 event.data.value = __uv.sourceHtml(

@@ -22,5 +22,21 @@
     "categories": [
       "all"
     ]
+  },
+  {
+    "name": "QuillBot",
+    "link": "https://quillbot.com/",
+    "image": "https://quillbot.com/favicon-144x144.png",
+    "categories": [
+      "all"
+    ]
+  },
+  {
+    "name": "W3Schools",
+    "link": "https://www.w3schools.com/",
+    "image": "https://www.w3schools.com/apple-touch-icon.png",
+    "categories": [
+      "all"
+    ]
   }
 ]

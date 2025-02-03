@@ -1,0 +1,21 @@
+{
+    "name": "AJH's Vault V6",
+    "short_name": "AJH's Vault",
+    "description": "A learning hub that may have hidden features.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#177f9e",
+    "icons": [
+        {
+            "src": "/home/icons/icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/home/icons/icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

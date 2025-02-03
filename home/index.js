@@ -180,11 +180,25 @@ const quotes = [
     "\"this site can load apps that competitors cant!\" - ajh",
     "\"ctrl shift qq\" - ajh",
     "\"cuddling with natuski\" - pajammykid75",
-    "\"Munching on ur earlobe\" - bearcat",
+    "\"Munching on ur earlobe\" - Bearcat",
     "\"teeming with life\" - molkify",
     "\"Dont think about it too much and if you cant, then get high\" - Grin",
-    
+    "\"swag\" - SkankFettucini",
+    "\"HOORAY!! does this have like ... a proxy\" - tomochins",
+    "\"TN is gay nvm\" - Bearcat",
+    "\"Poop\" - Donut Dev",
+    "\"guys whats 9+6 ... i need an answer\" - Technonyte",
+    "\"was the hitler war in the 1800's?\" - WindowsSR" 
 ];
 const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 document.querySelector('.quote-thing').textContent = randomQuote;
 
+
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(reg => console.log('Service Worker registered!', reg))
+            .catch(err => console.log('Service Worker registration failed:', err));
+    });
+}
