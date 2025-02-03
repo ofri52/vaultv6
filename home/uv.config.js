@@ -3,9 +3,8 @@ self.__uv$config = {
     bare: [
         'https://bare.benrogo.net',
         'https://rizzingupgyattsinohiofanumtaxxinguncskibiditoiletxdlmfaookbye.v2202412246404304352.megasrv.de/bare/',
-        'https://tomp.app',
+        'https://tomp.app/bare/',
         'https://void.radio.fm/bare/',
-        'https://0ziuro-6969.csb.app/',
         'https://arse.masplenedigitalworld.com/bare/',
         'https://immortaltowillose.xyz/bare/',
         'https://backend.infrared.bomberfish.ca',
