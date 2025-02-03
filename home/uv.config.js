@@ -2,6 +2,10 @@ self.__uv$config = {
     prefix: '/home/tiw/',
     bare: [
         'https://bare.benrogo.net',
+        'https://tomp.app',
+        'https://bare.immortaltowillose.xyz/',
+        'https://moonlight.silvereen.net/bare/' // sorry...
+        
     ],
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
