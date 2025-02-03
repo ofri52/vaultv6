@@ -188,7 +188,13 @@ const quotes = [
     "\"TN is gay nvm\" - Bearcat",
     "\"Poop\" - Donut Dev",
     "\"guys whats 9+6 ... i need an answer\" - Technonyte",
-    "\"was the hitler war in the 1800's?\" - WindowsSR" 
+    "\"was the hitler war in the 1800's?\" - WindowsSR",
+    "\"loading apps others cant💪\" - ajh",
+    "\"bookmark the link doc\" - ajh",
+    "\"bookmark the link doc pls\" - ajh",
+    "\"hey you! bookmark the link doc pls\" - ajh",
+    "\"if you want more links, bookmark the link doc pls\" - ajh",
+    "\"if you want more links, bookmark the link doc\" - ajh"
 ];
 const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 document.querySelector('.quote-thing').textContent = randomQuote;
