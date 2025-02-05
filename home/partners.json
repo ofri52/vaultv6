@@ -30,5 +30,21 @@
     "categories": [
       "all"
     ]
+  },
+  {
+    "name": "MexiMath",
+    "link": "https://mexismath.firebaseapp.com/",
+    "image": "/home/icons/meximath.png",
+    "categories": [
+      "all"
+    ]
+  },
+  {
+    "name": "If you wanna be on here,<br>DM me on Discord at<br>@ajhmath.org",
+    "link": "https://about.ajhmath.org",
+    "image": "/home/icons/pfp_real.png",
+    "categories": [
+      "all"
+    ]
   }
 ]
