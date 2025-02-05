@@ -6,5 +6,29 @@
     "categories": [
       "all"
     ]
+  },
+  {
+    "name": "Camouflague",
+    "link": "https://flage.site",
+    "image": "https://flage.site/favicon.gif",
+    "categories": [
+      "all"
+    ]
+  },
+  {
+    "name": "Lunar",
+    "link": "https://lunmeow.bearcat.rocks/",
+    "image": "/home/icons/lunar.webp",
+    "categories": [
+      "all"
+    ]
+  },
+  {
+    "name": "US4",
+    "link": "https://us4-ubg.github.io/",
+    "image": "https://voucan-us4.github.io/storage/images/logo.png",
+    "categories": [
+      "all"
+    ]
   }
 ]
