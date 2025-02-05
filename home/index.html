@@ -154,17 +154,62 @@ gtag('config', 'G-03F8ZHB8D8');
          <h1 style="transform: translateY(0.7em);">vault v6</h1>
          <p class="lowtaperfade3 quote-holder"><span class="quote-thing"></span></p>
          <form id="uv-form">
-            <input id="uv-search-engine" value="https://qwant.com/search?q=%s" type="hidden"/> 
+            <input id="uv-search-engine" value="https://searx.be/search?q=%s" type="hidden"/> 
             <input id="uv-address" type="text" placeholder="Search the web" class="form__input"/>
           </form>
-          <div class="desc left-margin">
-            <p id="uv-error"></p>
-            <pre id="uv-error-code"></pre>
-          </div>
+          <a id="cloaker" class="btn" style="font-size: 0.5em; opacity: 0.75;" onclick="openGame()">about:blank (DOUBLE CLICK)</a><br>
          <small style="font-size: 0.3em;">Welcome to the public beta! <b>If you receive an error when searching, reload the page, or click the Register button! 😄</b><br>
          Make sure to bookmark the <a href="https://docs.google.com/document/d/14LlAmWkhchNJ83BhM3KFEk4MLhu5HERqlwljGJs6fN4/edit?usp=sharing">Link Doc</a> so if the one you're using gets blocked, you have more!
          </small>
       </div>
+      <script>
+         function openGame(){
+     var urlObj = new window.URL(window.location.href);
+       var url = window.location;
+
+       if (url) {
+           var win;
+
+           document.querySelector('#cloaker').onclick = function() {
+               if (win) {
+                   win.focus();
+               } else {
+                   win = window.open();
+                   win.document.body.style.margin = '0';
+                   var originalTitle = document.title;
+               var faviconElement = document.querySelector('link[rel="icon"]');
+               var faviconURL = faviconElement ? faviconElement.href : '';
+               win.document.title = originalTitle;
+               if (faviconURL) {
+                   var favicon = win.document.createElement('link');
+                   favicon.rel = 'icon';
+                   favicon.href = faviconURL;
+                   win.document.head.appendChild(favicon);
+               }
+                   var iframe = win.document.createElement('iframe');
+                   iframe.style.border = 'none';
+                   iframe.style.width = '100%';
+                   iframe.style.height = '100%';
+                   iframe.style.margin = '0';
+                   iframe.style.overflow = 'hidden';
+                   iframe.src = url;
+                   win.document.body.appendChild(iframe);
+                   window.location.replace("https://classroom.google.com");
+
+                   var interval = setInterval(function() {
+                       if (win.closed) {
+                           clearInterval(interval);
+                           win = undefined;
+
+                       }
+                   }, 500);
+
+
+               }
+           };
+       }
+         }
+       </script>
       <nav>
          <a href="/home" class="active"><i class="fa-solid fa-house"></i></a>
          <a href="/home/g.html"><i class="fa-solid fa-gamepad"></i></a>
@@ -173,7 +218,8 @@ gtag('config', 'G-03F8ZHB8D8');
          <a href="/home"><i class="fa-solid fa-magnifying-glass"></i></a>
          <a href="https://docs.google.com/document/d/14LlAmWkhchNJ83BhM3KFEk4MLhu5HERqlwljGJs6fN4/edit?usp=sharing"><i class="fa-solid fa-link"></i></a>
             <a onclick="settingsModal()"><i class="fa-solid fa-ellipsis"></i></a>
-           <a href="https://github.com/1ajh/vaultv6"><i class="fa-brands fa-github"></i></a>
+
+<a href="https://github.com/1ajh/vaultv6"><i class="fa-brands fa-github"></i></a>
            <a href="https://discord.gg/UnDrzQQksw"><i class="fa-brands fa-discord"></i></a>
            <a href="/home/partners.html"><i class="fa-solid fa-handshake"></i></a>
        </nav>
@@ -185,54 +231,7 @@ gtag('config', 'G-03F8ZHB8D8');
       <script src="uv/uv.config.js" defer></script>
       <script src="register-sw.js" defer></script>
       <script src="search.js" defer></script>
-      <script src="index.js" defer></script>
-
-      <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
-      <div class="modal" id="settingsModal">
-          <span class="modal-close" onclick="closeModal()">&times;</span>
-          <div class="modal-content">
-            <h2>settings</h2>
-            Lag fixes (only works on home, will fix soon)
-              <div class="toggle-container">
-                  <label class="switch">
-                      <input type="checkbox" id="waveToggle">
-                      <span class="slider"></span>
-                  </label>
-                  <span>Toggle waves (reduces lag)</span>
-              </div>
-              <div class="toggle-container">
-               <label class="switch">
-                   <input type="checkbox" id="particlesToggle">
-                   <span class="slider"></span>
-               </label>
-               <span>Toggle particles (reduces lag a lot)</span>
-           </div>
-           <hr>
-           Tab cloaking (doesn't work at all lmao, will fix soon)<br>
-           <select name="tabcloaks" title="Tab cloaks">
-            <option value="search">Google</option>
-            <option value="drive">Google Drive</option>
-            <option value="classroom">Google Classroom</option>
-            <option value="fakesearch">Fake Google Search</option>
-            <option value="gmail">Gmail</option>
-            <option value="word">Word</option>
-            <option value="powerpoint">Powerpoint</option>
-            <option value="youtube">YouTube</option>
-            <option value="calendar">Google Calendar</option>
-            <option value="meets">Google Meet</option>
-            <option value="classroom">Google Classroom</option>
-            <option value="canvas">Canvas</option>
-            <option value="zoom">Zoom</option>
-            <option value="khan">Khan Academy</option>
-            <div class="select-buttons">
-            </div>
-          </select>
-            <button class="btn" onclick="setCloak()">Set Cloak</button>
-            <button class="btn" onclick="resetTab()">Reset Cloak</button>
-              <hr>
-
-          </div>
-      </div>
+      <script src="index.js"></script>
 
 
 
@@ -347,5 +346,431 @@ gtag('config', 'G-03F8ZHB8D8');
              channel: '1260507272854110240' // #🥂┆general
          })
      </script>
+
+
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+<div class="modal" id="settingsModal">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <h2>settings</h2>
+      Lag fixes
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="waveToggle">
+                <span class="slider"></span>
+            </label>
+            <span>Toggle waves</span>
+        </div>
+        <div class="toggle-container">
+         <label class="switch">
+             <input type="checkbox" id="particlesToggle">
+             <span class="slider"></span>
+         </label>
+         <span>Toggle particles (helps a LOT)</span>
+     </div>
+     <hr>
+     Tab cloaking<br>
+     <select name="tabcloaks" id="premadecloaks" title="Tab cloaks">
+      <option value="search">Google</option>
+      <option value="drive">Google Drive</option>
+      <option value="classroom">Google Classroom</option>
+      <option value="fakesearch">Fake Google Search</option>
+      <option value="gmail">Gmail</option>
+      <option value="word">Word</option>
+      <option value="powerpoint">Powerpoint</option>
+      <option value="youtube">YouTube</option>
+      <option value="calendar">Google Calendar</option>
+      <option value="meets">Google Meet</option>
+      <option value="classroom">Google Classroom</option>
+      <option value="canvas">Canvas</option>
+      <option value="zoom">Zoom</option>
+      <option value="khan">Khan Academy</option>
+      <div class="select-buttons">
+      </div>
+    </select>
+      <button class="btn" onclick="setCloak()">Set Cloak</button>
+      <button class="btn" onclick="resetTab()">Reset Cloak</button>
+        <hr>
+
+    </div>
+</div>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+   const toggle = document.getElementById("waveToggle");
+   const ocean = document.getElementById("ocean");
+   
+   function updateVisibility() {
+       if (localStorage.getItem("wavesDisabled") === "true") {
+           ocean.style.display = "none";
+           toggle.checked = true;
+       } else {
+           ocean.style.display = "block";
+           toggle.checked = false;
+       }
+   }
+   
+   toggle.addEventListener("change", function() {
+       localStorage.setItem("wavesDisabled", toggle.checked);
+       updateVisibility();
+   });
+   
+   updateVisibility();
+});
+
+function settingsModal() {
+   document.getElementById("settingsModal").style.display = "block";
+}
+function closeModal() {
+   document.getElementById("settingsModal").style.display = "none";
+}
+document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.getElementById("particlesToggle");
+  const particles = document.getElementById("particles-js");
+  function updateVisibility() {
+     if (localStorage.getItem("particlesDisabled") === "true") {
+           particles.style.display = "none";
+           toggle.checked = true;
+     } else {
+           particles.style.display = "block";
+           toggle.checked = false;
+     }
+  }
+  toggle.addEventListener("change", function() {
+     localStorage.setItem("particlesDisabled", toggle.checked);
+     updateVisibility();
+  });
+  updateVisibility();
+});
+function settingsModal() {
+  document.getElementById("settingsModal").style.display = "block";
+}
+function closeModal() {
+  document.getElementById("settingsModal").style.display = "none";
+}
+
+// Define some varibles for later
+const origin = localStorage.getItem('instance');
+const cdn = localStorage.getItem('cdn');
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const onLoadData = urlParams.get('onload');
+
+const base = document.createElement('base');
+base.href = location.origin + path.replace(path.split('\\').pop().split('/').pop(), '');
+document.head.appendChild(base);
+
+// If we do not have the origin var, we make it
+if (!origin) {
+ localStorage.setItem('instance', base.href);
+ location.reload();
+}
+
+
+
+const instance = encodeURIComponent(origin.replace(location.origin, ''));
+
+// If we have onLoadData, we run it now
+window.onload = () => {
+ if (onLoadData) {
+   eval(onLoadData);
+ }
+};
+
+// If we have any errors, we will log it
+window.onerror = (e) => {
+ throw new Error(e);
+};
+
+// Collect Tab Cloak data from local storage
+var tab = localStorage.getItem('tab');
+if (tab) {
+ try {
+   // Parse the data, it is in JSON
+   var tabData = JSON.parse(tab);
+ } catch {
+   var tabData = {};
+ }
+} else {
+ var tabData = {};
+}
+
+// Set the Tab title if the Tab cloak data is there
+if (tabData.title) {
+ document.title = tabData.title;
+}
+
+// Set the Tab icon if the Tab cloak data is there
+if (tabData.icon) {
+ document.querySelector('link[rel="icon"]').href = tabData.icon;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("settingsModal");
+    if (modal) {
+        modal.style.display = "none";
+        setTimeout(() => {
+            modal.style.display = "block";
+        }, 2000);
+    }
+});
+
+
+var tab = localStorage.getItem("tab");
+
+if (tab) {
+ try {
+   var tabData = JSON.parse(tab);
+   if (tabData.theme) {
+     var styleTag = document.getElementById("theme-style");
+     if (!styleTag) {
+       styleTag = document.createElement("style");
+       styleTag.id = "theme-style";
+       document.body.appendChild(styleTag);
+     }
+     switch (tabData.theme) {
+       case "dark":
+         styleTag.innerHTML = "body { background-color: #121212; color: #e0e0e0; }";
+         break;
+       case "light":
+         styleTag.innerHTML = "body { background-color: #ffffff; color: #000000; }";
+         break;
+       default:
+         styleTag.innerHTML = "";
+     }
+
+
+   }
+ } catch {
+   // Handle or ignore parsing error
+ }
+}
+
+var tab = localStorage.getItem("tab");
+
+if (tab) {
+try {
+ var tabData = JSON.parse(tab);
+} catch {
+ var tabData = {};
+}
+} else {
+var tabData = {};
+}
+
+var settingsDefaultTab = {
+ title: "AJH's Vault V6",
+ icon: "/home/icon.png",
+ scriptSrc: "/index.js"
+};
+
+function setTitle(title = "") {
+ if (title) {
+   document.title = title;
+ } else {
+   document.title = settingsDefaultTab.title;
+ }
+
+ var tab = localStorage.getItem("tab");
+
+ if (tab) {
+   try {
+     var tabData = JSON.parse(tab);
+   } catch {
+     var tabData = {};
+   }
+ } else {
+   var tabData = {};
+ }
+
+ if (title) {
+   tabData.title = title;
+ } else {
+   delete tabData.title;
+ }
+
+ localStorage.setItem("tab", JSON.stringify(tabData));
+}
+
+function setFavicon(icon) {
+ if (icon) {
+   document.querySelector("link[rel='icon']").href = icon;
+ } else {
+   document.querySelector("link[rel='icon']").href = settingsDefaultTab.icon;
+ }
+
+ var tab = localStorage.getItem("tab");
+
+ if (tab) {
+   try {
+     var tabData = JSON.parse(tab);
+   } catch {
+     var tabData = {};
+   }
+ } else {
+   var tabData = {};
+ }
+
+ if (icon) {
+   tabData.icon = icon;
+ } else {
+   delete tabData.icon;
+ }
+
+ localStorage.setItem("tab", JSON.stringify(tabData));
+}
+
+function setCloak() {
+ var cloak = document.getElementById("premadecloaks").value;
+ switch (cloak) {
+   case "defaultsettings":
+   setTitle("AJH's Vault V6");
+   setFavicon("/home/icon.png");
+   localStorage.setItem("tab", JSON.stringify({}));
+   location.reload();
+   break;
+   case "search":
+     setTitle("Google");
+     setFavicon("https://frogieeshouldgeta.massivelowtaperfa.de/assets/img/favicons/google.ico");
+     location.reload();
+     break;
+   case "drive":
+     setTitle("My Drive - Google Drive");
+     setFavicon("https://frogieeshouldgeta.massivelowtaperfa.de/assets/img/favicons/google-drive-ico.ico");
+     location.reload();
+     break;
+   case "classroom":
+     setTitle("Google Classroom");
+     setFavicon("https://frogieeshouldgeta.massivelowtaperfa.de/assets/img/favicons/google-classroom.ico");
+     location.reload();
+     break;
+   case "gmail":
+     setTitle("Gmail");
+     setFavicon("https://frogieeshouldgeta.massivelowtaperfa.de/assets/img/favicons/gmail.ico");
+     location.reload();
+     break;
+   case "word":
+     setTitle("Document.docx");
+     setFavicon("https://frogieeshouldgeta.massivelowtaperfa.de/assets/img/favicons/word.ico");
+     location.reload();
+     break;
+   case "powerpoint":
+     setTitle("Presentation.pptx");
+     setFavicon("https://frogieeshouldgeta.massivelowtaperfa.de/assets/img/favicons/powerpoint.ico");
+     location.reload();
+     break;
+   case "youtube": 
+     setTitle("YouTube");
+     setFavicon("https://frogieeshouldgeta.massivelowtaperfa.de/assets/img/favicons/youtube.ico");
+     location.reload();
+     break;
+   case "calendar":
+     setTitle("Google Calendar");
+     setFavicon("https://frogieeshouldgeta.massivelowtaperfa.de/assets/img/favicons/google-calender.ico");
+     location.reload();
+     break;
+   case "meets":
+     setTitle("Google Meet");
+     setFavicon("https://frogieeshouldgeta.massivelowtaperfa.de/assets/img/favicons/google-meet.ico");
+     location.reload();
+     break;
+   case "canvas":
+     setTitle("Canvas");
+     setFavicon("https://frogieeshouldgeta.massivelowtaperfa.de/assets/img/favicons/canvas.ico");
+     location.reload();
+     break;
+   case "zoom":
+     setTitle("Zoom");
+     setFavicon("https://frogieeshouldgeta.massivelowtaperfa.de/assets/img/favicons/zoom.ico");
+     location.reload();
+     break;
+   case "khan":
+     setTitle("Khan Academy"); 
+     setFavicon("https://frogieeshouldgeta.massivelowtaperfa.de/assets/img/favicons/khan-academy.ico");
+     location.reload();
+     break;
+   case "fakesearch":
+     setTitle("calculator - Google Search"); 
+     setFavicon("https://frogieeshouldgeta.massivelowtaperfa.de/assets/img/favicons/google.ico");
+     location.reload();
+     break;
+ }
+}
+
+function resetTab() {
+ setTitle("AJH's Vault V6");
+ setFavicon("/home/icon.png");
+  var tab = localStorage.getItem("tab");
+
+  if (tab) {
+    try {
+      var tabData = JSON.parse(tab);
+      var theme = tabData.theme
+      var mobiledata
+    } catch {
+      var tabData = {};
+    }
+  } else {
+    var tabData = {};
+  }
+
+  if (theme) {
+    const consttheme = tabData.theme;
+    localStorage.setItem("tab", JSON.stringify({}));
+    setTheme(consttheme);
+  } 
+  else if (mobiledata){
+   const constmobiledata = tabData.mobilescreen;
+   localStorage.setItem("tab", JSON.stringify({}));
+   var tabData = JSON.parse(localStorage.getItem("tab")) || {};
+   tabData.mobilescreen = constmobiledata;
+   localStorage.setItem("tab", JSON.stringify(tabData));
+  }
+  else {
+   localStorage.setItem("tab", JSON.stringify({}));
+  }
+ location.reload();
+}
+
+window.onload = () => {
+ if (onLoadData) {
+   eval(onLoadData);
+ }
+};
+
+window.onerror = (e) => {
+ throw new Error(e);
+};
+
+var tab = localStorage.getItem('tab');
+if (tab) {
+ try {
+   var tabData = JSON.parse(tab);
+ } catch {
+   var tabData = {};
+ }
+} else {
+ var tabData = {};
+}
+
+if (tabData.title) {
+ document.title = tabData.title;
+}
+
+if (tabData.icon) {
+ document.querySelector('link[rel="icon"]').href = tabData.icon;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("settingsModal");
+    if (modal) {
+        modal.style.display = "none";
+        setTimeout(() => {
+            modal.style.display = "block";
+        }, 2000);
+    }
+});
+
+</script>
    </body>
 </html>

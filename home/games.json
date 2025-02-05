@@ -4,6 +4,24 @@
       "link": "https://poki.com",
       "image": "https://s2.qwant.com/thumbr/300x300/d/a/475635d449b3dd52767710e8b369c57b06473f818c737748fc83024d67a79d/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.gkOgHlYykQ2EGuBh5ZwEjAAAAA%26pid%3DApi&q=0&b=1&p=0&a=0",
       "categories": [
+        "all",
+        "site"
+      ]
+    },
+    {
+      "name": "Yandex Games",
+      "link": "https://yandex.com/games/",
+      "image": "https://yastatic.net/s3/games-static/favicons/yandex/square/icon-512.png",
+      "categories": [
+        "all",
+        "site"
+      ]
+    },
+    {
+      "name": "Nowgg.lol",
+      "link": "https://nowgg.lol",
+      "image": "https://frogiesarcade.win/images/apps/nowgg.jpg",
+      "categories": [
         "all"
       ]
     },
@@ -11,6 +29,14 @@
       "name": "Fancade",
       "link": "https://play.fancade.com",
       "image": "/home/icons/kvNLsQnHoTkqKPWsD96tNhV7hftHW.jpg",
+      "categories": [
+        "all"
+      ]
+    },
+    {
+      "name": "KBHGames",
+      "link": "https://kbhgames.com/",
+      "image": "https://cdn.cybrhome.com/media/website/live/icon/icon_kbhgames.com_51cce0.png",
       "categories": [
         "all"
       ]
@@ -26,23 +52,7 @@
     {
       "name": "Gartic Phone",
       "link": "https://garticphone.com",
-      "image": "/home/icons/GJzR7wSAxXWYsO1bQObuEyk8.webp",
-      "categories": [
-        "all"
-      ]
-    },
-    {
-      "name": "Newgrounds",
-      "link": "https://newgrounds.com/",
-      "image": "/home/icons/rmp6plH5FtyEejWE4l9bQb.webp",
-      "categories": [
-        "all"
-      ]
-    },
-    {
-      "name": "Pranx",
-      "link": "https://pranx.com/",
-      "image": "/home/icons/HbtSDGKP6q4ReEIGF.webp",
+      "image": "https://gartic.com/images/garticphone.png",
       "categories": [
         "all"
       ]
@@ -1165,14 +1175,6 @@
       ]
     },
     {
-      "name": "BuildNow.GG",
-      "link": "https://games.crazygames.com/en_US/buildnow-gg/index.html",
-      "image": "/home/icons/huKD6xLaIQM5F82XzZrGQdN.webp",
-      "categories": [
-        "all"
-      ]
-    },
-    {
       "name": "Cat Ninja",
       "link": "https://4iapq88o5f3gc1dij3it0mp5jojnm3jr-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%252Fcat-ninja.xml",
       "image": "/home/icons/KY9w23xgG7FT9zNiq025TlfACQN9c6XQxZlP2.webp",
@@ -1617,6 +1619,16 @@
       ]
     },
     {
+      "name": "Noob Squash +<br>(VAULT EXCLUSIVE)",
+      "link": "https://charmsgames.netlify.app/noobsquash+/noobsquash+",
+      "image": "https://charmsgames.netlify.app/charmsgames_files/ns-thumbnail.png",
+      "categories": [
+        "all",
+        "exclusive"
+      ]
+    },
+    {
+      
       "name": "OvO",
       "link": "https://8rlfg0ch3417et18dp8lvps6uo7c3b2c-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://427396048-642845047394716217.preview.editmysite.com/uploads/b/139890129-761103484729797659/files/ovo.xml",
       "image": "/home/icons/XNAZxalLTkvWRc0uG4UcSNtjZaakwXl4.webp",
