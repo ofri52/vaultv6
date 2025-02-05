@@ -40,6 +40,30 @@
     ]
   },
   {
+    "name": "Frogie's Arcade",
+    "link": "https://frogiesarca.de/",
+    "image": "https://frogiesarca.de/images/logo.gif",
+    "categories": [
+      "all"
+    ]
+  },
+  {
+    "name": "Szvy Central",
+    "link": "https://szvy.lol",
+    "image": "https://i.ibb.co/GM0TFjM/szvylogo.png",
+    "categories": [
+      "all"
+    ]
+  },
+  {
+    "name": "The Gaming Escape",
+    "link": "https://gr4ys0n.github.io",
+    "image": "https://gr4ys0n.github.io/src/images/favicon.jpg",
+    "categories": [
+      "all"
+    ]
+  },
+  {
     "name": "If you wanna be on here,<br>DM me on Discord at<br>@ajhmath.org",
     "link": "https://about.ajhmath.org",
     "image": "/home/icons/pfp_real.png",
