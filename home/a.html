@@ -71,7 +71,134 @@ gtag('config', 'G-03F8ZHB8D8');
 </style>
    
    <link rel="manifest" href="/home/manifest.json">
-
+   <style>
+  
+    input, select, .btn {
+      outline: none;
+      border-radius: 1em;
+      background: none;
+      border: solid 2px #9b9b9b;
+      color: #fff;
+      font-family: 'Satoshi', sans-serif;
+      margin-top: 2em;
+      margin-left: 1em;
+    }
+    
+    input, .btn {
+      height: 3em;
+      margin-left: 3em;
+      padding: 0.25em;
+    }
+    
+    option {
+      background: #000;
+      font-family: 'Satoshi', sans-serif;
+    }
+    
+    select {
+      height: 3.8em;
+    }
+    .btn:hover, select option:hover, select:hover {
+      cursor: pointer;
+    }
+    
+    ::placeholder {
+      color: #fff;
+      opacity: 1; /* Firefox */
+    }
+    
+    ::-ms-input-placeholder { /* Edge 12 -18 */
+      color: #fff;
+    }
+    
+    .game-card {
+      transition: transform 0.2s;
+    }
+    
+    .game-card:hover {
+      transform: scale(1.05);
+    }
+    
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #131313;
+      transition: 0.3s;
+      border-radius: 20px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 14px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #2293c7;
+    }
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      left: 35%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+      width: 30vw;
+      height: 30vh;
+      background: rgba(5, 5, 5, 0.973);
+      padding: 1em;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border-radius: 1em;
+      font-size: 1.1em;
+      z-index: 3;
+      text-align: right;
+      border: solid 2px rgba(121, 121, 121, 0.3);
+      animation: fadeSlideUp 0.5s ease-out forwards;
+      overflow-y: scroll;
+    }
+    hr {
+    border-color: rgba(255, 255, 255, 0.158);
+    }
+    .modal .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
+    .modal-close:hover {
+    cursor: pointer;
+    }
+    .modal-close {
+    font-size: 2em;
+    line-height: 0;
+    }
+    .modal-content {
+    text-align: left;
+    }
+    </style>
 </head>
    <body>
       <div id="particles-js"></div>
@@ -455,6 +582,21 @@ if (tabData.icon) {
  document.querySelector('link[rel="icon"]').href = tabData.icon;
 }
 
+function setTitle(title) {
+    document.title = title;
+}
+
+function setFavicon(iconURL) {
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+        link = document.createElement("link");
+        link.rel = "icon";
+        document.head.appendChild(link);
+    }
+    link.href = iconURL;
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("settingsModal");
     if (modal) {
@@ -508,67 +650,6 @@ try {
 var tabData = {};
 }
 
-var settingsDefaultTab = {
- title: "AJH's Vault V6",
- icon: "/home/icon.png",
- scriptSrc: "/index.js"
-};
-
-function setTitle(title = "") {
- if (title) {
-   document.title = title;
- } else {
-   document.title = settingsDefaultTab.title;
- }
-
- var tab = localStorage.getItem("tab");
-
- if (tab) {
-   try {
-     var tabData = JSON.parse(tab);
-   } catch {
-     var tabData = {};
-   }
- } else {
-   var tabData = {};
- }
-
- if (title) {
-   tabData.title = title;
- } else {
-   delete tabData.title;
- }
-
- localStorage.setItem("tab", JSON.stringify(tabData));
-}
-
-function setFavicon(icon) {
- if (icon) {
-   document.querySelector("link[rel='icon']").href = icon;
- } else {
-   document.querySelector("link[rel='icon']").href = settingsDefaultTab.icon;
- }
-
- var tab = localStorage.getItem("tab");
-
- if (tab) {
-   try {
-     var tabData = JSON.parse(tab);
-   } catch {
-     var tabData = {};
-   }
- } else {
-   var tabData = {};
- }
-
- if (icon) {
-   tabData.icon = icon;
- } else {
-   delete tabData.icon;
- }
-
- localStorage.setItem("tab", JSON.stringify(tabData));
-}
 
 function setCloak() {
  var cloak = document.getElementById("premadecloaks").value;
@@ -710,6 +791,21 @@ if (tabData.title) {
 if (tabData.icon) {
  document.querySelector('link[rel="icon"]').href = tabData.icon;
 }
+
+function setTitle(title) {
+    document.title = title;
+}
+
+function setFavicon(iconURL) {
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+        link = document.createElement("link");
+        link.rel = "icon";
+        document.head.appendChild(link);
+    }
+    link.href = iconURL;
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("settingsModal");
