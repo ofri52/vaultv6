@@ -1321,11 +1321,29 @@
       ]
     },
     {
-      "name": "FNAF 2 (Scratch)",
-      "link": "https://scratch.mit.edu/projects/469219637/embed/",
+      "name": "FNAC<br>(VAULT EXCLUSIVE)",
+      "link": "https://fnac1.pages.dev/",
+      "image": "https://fnac1.pages.dev/",
+      "categories": [
+        "all",
+        "exclusive"
+      ]
+    },
+    {
+      "name": "FNAF 2",
+      "link": "https://turbowarp.org/469219637/fullscreen/",
       "image": "/home/icons/JmG7En9dZDgnGa8rJ48RDNBfcOve.webp",
       "categories": [
         "all"
+      ]
+    },
+    {
+      "name": "FNAPPWO 1<br>(VAULT EXCLUSIVE)",
+      "link": "https://fnappwoone.pages.dev/",
+      "image": "https://fnappwoone.pages.dev/gameicon111.png",
+      "categories": [
+        "all",
+        "exclusive"
       ]
     },
     {
