@@ -342,82 +342,82 @@ gtag('config', 'G-03F8ZHB8D8');
       </script>
 
 
-      <script>
- function setFallbackImage(event) {
-    event.target.src = '/home/icons/placeholder.png';
-}
-
-document.addEventListener("DOMContentLoaded", async () => {
-    const gamesList = document.getElementById("games-list");
-    const searchBar = document.getElementById("search-bar");
-    const categoryFilter = document.getElementById("category-filter");
-
-    try {
-        const response = await fetch("partners.json");
-        const games = await response.json();
-
-        // Populate category filter with unique categories
-        const categories = new Set();
-        games.forEach(game => game.categories.forEach(cat => categories.add(cat)));
-        categories.forEach(cat => {
-            const option = document.createElement("option");
-            option.value = cat;
-            option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
-            categoryFilter.appendChild(option);
-        });
-
-        // Function to display games
-        function displayGames(filteredGames) {
-            gamesList.innerHTML = "";
-            filteredGames.forEach(game => {
-                const gameCard = document.createElement("div");
-                gameCard.classList.add("game-card");
-
-                // Construct the image URL
-                const imageUrl = game.image;
-
-                // Create the game card's inner HTML
-                gameCard.innerHTML = `
-    <a href="${encodeURIComponent(game.link)}">
-        <img src="${imageUrl}" alt="${game.name}" onerror="this.onerror=null;this.src='/home/icons/placeholder.png';">
-        <p>${game.name}</p>
-    </a>
-`;
-
-                // Append the card to the list
-                gamesList.appendChild(gameCard);
-            });
-        }
-
-        // Initial display of games
-        displayGames(games);
-
-        // Search and filter functionality
-        function filterGames() {
-            const searchText = searchBar.value.toLowerCase();
-            const selectedCategory = categoryFilter.value;
-
-            const filteredGames = games.filter(game =>
-                game.name.toLowerCase().includes(searchText) &&
-                (selectedCategory === "all" || game.categories.includes(selectedCategory))
-            );
-
-            displayGames(filteredGames);
-        }
-
-        // Event listeners
-        searchBar.addEventListener("input", filterGames);
-        categoryFilter.addEventListener("change", filterGames);
-
-    } catch (error) {
-        console.error("Failed to load games:", error);
-    }
-});
-
-
-
-
-      </script>
+<script>
+  function setFallbackImage(event) {
+     event.target.src = '/home/icons/placeholder.png';
+ }
+ 
+ document.addEventListener("DOMContentLoaded", async () => {
+     const gamesList = document.getElementById("games-list");
+     const searchBar = document.getElementById("search-bar");
+     const categoryFilter = document.getElementById("category-filter");
+ 
+     try {
+         const response = await fetch("apps.json");
+         const games = await response.json();
+ 
+         // Populate category filter with unique categories
+         const categories = new Set();
+         games.forEach(game => game.categories.forEach(cat => categories.add(cat)));
+         categories.forEach(cat => {
+             const option = document.createElement("option");
+             option.value = cat;
+             option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+             categoryFilter.appendChild(option);
+         });
+ 
+         // Function to display games
+         function displayGames(filteredGames) {
+             gamesList.innerHTML = "";
+             filteredGames.forEach(game => {
+                 const gameCard = document.createElement("div");
+                 gameCard.classList.add("game-card");
+ 
+                 // Construct the image URL
+                 const imageUrl = game.image;
+ 
+                 // Create the game card's inner HTML
+                 gameCard.innerHTML = `
+     <a href="/home/output.html?url=${encodeURIComponent(game.link)}">
+         <img src="${imageUrl}" alt="${game.name}" onerror="this.onerror=null;this.src='/home/icons/placeholder.png';">
+         <p>${game.name}</p>
+     </a>
+ `;
+ 
+                 // Append the card to the list
+                 gamesList.appendChild(gameCard);
+             });
+         }
+ 
+         // Initial display of games
+         displayGames(games);
+ 
+         // Search and filter functionality
+         function filterGames() {
+             const searchText = searchBar.value.toLowerCase();
+             const selectedCategory = categoryFilter.value;
+ 
+             const filteredGames = games.filter(game =>
+                 game.name.toLowerCase().includes(searchText) &&
+                 (selectedCategory === "all" || game.categories.includes(selectedCategory))
+             );
+ 
+             displayGames(filteredGames);
+         }
+ 
+         // Event listeners
+         searchBar.addEventListener("input", filterGames);
+         categoryFilter.addEventListener("change", filterGames);
+ 
+     } catch (error) {
+         console.error("Failed to load games:", error);
+     }
+ });
+ 
+ 
+ 
+ 
+       </script>
       <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
          new Crate({
              server: '1260507272375963708', // AJH's Services 🪐
