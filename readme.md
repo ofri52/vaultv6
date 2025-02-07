@@ -1,5 +1,5 @@
 # AJH's Vault V6 <a href="https://discord.gg/UnDrzQQksw"><img style="height: 1em;" src="https://github.com/dheereshagrwal/colored-icons/raw/master/public/logos/discord/discord.svg"></a>
-The best UBG! Includes games, proxies, math tools, apps, customization, and more!
+The best UBG! Includes 100,000+ games, proxy, educational tools, apps, customization, flexibility, and more!
 
 [![Deploy to Heroku](https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg)](https://heroku.com/deploy/?template=https://github.com/1ajh/vaultv6)
 [![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://replit.com/github/1ajh/vaultv6)
@@ -20,6 +20,7 @@ The best UBG! Includes games, proxies, math tools, apps, customization, and more
 > You can access all curated links for the site [here.](https://docs.google.com/document/d/14LlAmWkhchNJ83BhM3KFEk4MLhu5HERqlwljGJs6fN4/edit?usp=sharing)
 
 Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+UV operates under AGPL v3.
 
 > [!IMPORTANT]
 > This project is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].<br>
