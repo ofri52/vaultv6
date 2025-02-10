@@ -28,7 +28,12 @@ body {
   text-align: center;
   padding-left: 2em;
   padding-right: 2em;
-  padding-top: 4vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.theshiftthing {
+  transform: translateY(-10vh) !important;
 }
 
 #header {
@@ -86,11 +91,19 @@ a{
   font-family: 'Alssential Free Trial', sans-serif;
 }
 
+.uhthebottomthing {
+  transform: translateY(0em);
+  line-height: 0.3em;
+}
+
 #uv-form {
   position: relative;
   z-index: 1;
   font-size: 0.95em;
+  margin-bottom: 0;
 }
+
+
 
 #uv-form::after {
   content: '';
@@ -98,12 +111,13 @@ a{
   top: 0;
   left: 0;
   width: 100%;
-  height: 10vh;
+  height: 4vh;
   z-index: -1;
   background: radial-gradient(circle, rgba(4, 43, 54, 0.8) 10%, rgba(26, 98, 192, 0) 70%);
   mix-blend-mode: overlay; /* Adjust blending for the effect */
   animation: spin 16s infinite linear;
   border-radius: 2em;
+  margin-bottom: 0;
 }
 
 .form__input::placeholder {
@@ -309,6 +323,7 @@ footer a i {
 
 .quote-thing {
   font-family: 'Satoshi', sans-serif;
+  font-size: 0.8em;
 }
 
 .lowtaperfade, .lowtaperfade3 {
