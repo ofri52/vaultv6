@@ -1,6 +1,8 @@
 self.__uv$config = {
     prefix: '/home/tiw/',
     bare: [
+        'https://mexi.rest/bare/',
+        'https://mexi.jobi.one/bare/',
         'https://bare.benrogo.net',
         'https://meximathbarepacketyo.global.ssl.fastly.net/bare/',
         'https://rizzingupgyattsinohiofanumtaxxinguncskibiditoiletxdlmfaookbye.v2202412246404304352.megasrv.de/bare/',
