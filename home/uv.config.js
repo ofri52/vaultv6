@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/home/tiw/',
-    bare: 'http://animal-bear.ajh.boats/bare/',
+    bare: 'https://animal-bear.ajh.boats/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/home/uv/uv.handler.js',
