@@ -280,10 +280,8 @@ text-align: left;
       <script src="uv/uv.config.js" defer></script>
       <script src="register-sw.js" defer></script>
       <script src="search.js" defer></script>
-      <script src="index.js"></script>
-
-
-
+      <script src="index.js" defer></script>
+      <script src="error.js" defer></script>
 
       <script>
          particlesJS("particles-js", {
@@ -551,6 +549,8 @@ if (tabData.icon) {
 function setTitle(title) {
     document.title = title;
 }
+
+   // i already know someone is gonna say this is chatgpt, and yes, this part ONLY was chatgpt because i cant code that well in javascript
 
 function setFavicon(iconURL) {
     let link = document.querySelector("link[rel~='icon']");
