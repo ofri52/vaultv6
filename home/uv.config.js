@@ -1,5 +1,5 @@
 self.__uv$config = {
-    prefix: '/home/tiw/',
+    prefix: '/home/',
     bare: 'https://animal-bear.ajh.boats/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
